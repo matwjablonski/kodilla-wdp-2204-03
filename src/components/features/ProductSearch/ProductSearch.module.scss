@@ -12,6 +12,11 @@
     align-items: center;
     position: relative;
 
+    &:hover {
+      background-color: $primary;
+      color: #ffff;
+    }
+
     .icon:first-child {
       color: $primary;
       position: absolute;
@@ -25,6 +30,51 @@
       z-index: 0;
     }
 
+    ul {
+      position: relative;
+      font-size: 14px;
+      outline: none;
+      padding: 10px 30px 10px 35px;
+      margin: 0;
+      z-index: 1;
+      cursor: pointer;
+
+      &:hover ul {
+        position: absolute;
+        display: block;
+        color:black;
+        background-color: #ffff;
+        border: solid 1px #292929;
+        text-align: center;
+        top: 0;
+        right: 0;
+        margin-top: 42px;
+        width: 100px;
+        height: 180px;
+      }
+
+      li {
+        display: block;
+        user-select: none;
+      }
+
+      ul {
+        display: none;
+        padding: 0;
+        padding-top: 10px;
+        cursor: pointer;
+
+        li {
+          padding: 5px 0;
+
+          &:hover {
+            background-color: $primary;
+            color: #ffff;
+          }
+        }
+      }
+    }
+
     select {
       -webkit-appearance: none;
       border: 0;
@@ -33,6 +83,12 @@
       position: relative;
       z-index: 1;
     }
+  }
+
+  .selectField {
+    display: flex;
+    align-items: center;
+    position: relative;
   }
 
   .searchField {
