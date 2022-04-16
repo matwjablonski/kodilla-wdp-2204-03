@@ -1,13 +1,57 @@
+// NOTE: DO NOT use the main color variables in files,
+//  use the variables assigned to the components below
+$whide: #ffffff;
+$darkGray: #2a2a2a;
+$darkOrage: #d58e32;
+$liteGray: #a9a9a9;
+$gray-1: #e0e3ed;
+$gray-2: rgb(216, 216, 216);
+$gray-4: rgb(169, 169, 169);
+$gray-5:  #434343;
+$gray-6: #363636;
+// components varibles
+
+$header-topbar-bg: $gray-5;
+$header-topbar-color: $whide;
+
+$menubar-bg: $whide;
+
+$companyClaim-phoneNumber-color: $gray-2;
+$companyClaim-cardBox-color: $whide;
+$companyClaim-cardCouter-color: $gray-1;
+
+$footer-claim-bg: $darkGray;
+$footer-bg: $gray-5;
+$footer-menuWrapper-color: $whide;
+$footer-menuWrapper-change: $gray-4;
+$footer-copyright: $gray-4;
+$footer-socialmedia: $gray-4;
+
+$furniture-border-color: $gray-2;
+$furniture-menu-color: $darkGray;
+$furniture-dots-bg: $whide;
+
+$productBox-bg: $whide;
+$productBox-border: $gray-2;
+$productBox-photo-bg: $gray-2;
+$productBox-sale-bg: $darkGray;
+$productBox-sale-text: $whide;
+$productBox-stars-color: $darkGray;
+$productBox-line-border: $darkGray;
+
+$featureBox-border: $liteGray;
+$featureBox-bg: $whide;
+$featureBox-content-text:$darkGray;
+$featureBox-iconWrapper-color: $whide;
+
+$button-bg: $darkGray;
+$button-color-text: $whide;
+
+$primary: $darkOrage;
+$header-bg: $gray-5;
+
+$text-color: $darkGray;
+
+$form-border-color: $darkGray;
+
 $base-padding: 24px;
-
-$header-topbar-bg: #434343;
-$header-bg: #363636;
-
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
-
-$primary: #d58e32;
-
-$text-color: #2a2a2a;
-
-$form-border-color: #292929;
