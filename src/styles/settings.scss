@@ -11,3 +11,11 @@ $primary: #d58e32;
 $text-color: #2a2a2a;
 
 $form-border-color: #292929;
+
+%hover-params {
+  transition: background-color 0.25s,
+  border-color 0.25s,
+  color 0.25s,
+  transform 0.25s,
+  opacity 0.25s;
+}
