@@ -77,3 +77,14 @@
     align-items: center;
   }
 }
+
+.root:hover {
+  .buttons {
+    visibility: visible;
+  }
+  .price {
+    div {
+      background-color: #d58e32;
+    }
+  }
+}

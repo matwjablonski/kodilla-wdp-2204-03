@@ -3,14 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './Button.module.scss';
 
-const Button = ({
-  hoverOn,
-  children,
-  variant,
-  noHover,
-  className: propClassName,
-  ...props
-}) => {
+const Button = ({ children, variant, noHover, className: propClassName, ...props }) => {
   const classes = [];
 
   if (propClassName) classes.push(propClassName);
@@ -23,10 +16,6 @@ const Button = ({
   if (noHover) {
     classes.push(styles.noHover);
     Comp = 'div';
-  }
-
-  if (hoverOn) {
-    classes.push(styles.hoverOn);
   }
 
   return (

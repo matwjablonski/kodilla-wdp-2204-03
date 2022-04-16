@@ -18,13 +18,6 @@
   }
 }
 
-.hoverOn {
-  visibility: visible;
-  &.noHover {
-    background-color: #d58e32;
-  }
-}
-
 .small {
   @extend .main;
   font-size: 13px;
