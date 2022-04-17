@@ -8,10 +8,11 @@ import {
   faExchangeAlt,
   faShoppingBasket,
 } from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+import FavoritesButton from '../../features/FavoritesButton/FavoritesButton';
 
-const ProductBox = ({ name, price, promo, stars, oldPrice }) => (
+const ProductBox = ({ id, name, price, promo, stars, oldPrice, favorite }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
       <img
@@ -44,9 +45,7 @@ const ProductBox = ({ name, price, promo, stars, oldPrice }) => (
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline'>
-          <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-        </Button>
+        <FavoritesButton favorite={favorite} id={id} />
         <Button variant='outline'>
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
@@ -62,12 +61,14 @@ const ProductBox = ({ name, price, promo, stars, oldPrice }) => (
 );
 
 ProductBox.propTypes = {
+  id: PropTypes.string,
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
   oldPrice: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  favorite: PropTypes.bool,
 };
 
 export default ProductBox;

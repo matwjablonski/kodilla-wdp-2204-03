@@ -2,8 +2,8 @@ import { combineReducers, createStore } from 'redux';
 import initialState from './initialState';
 
 import cartReducer from './cartRedux';
-import categoriesReducer from './categoriesRedux';
 import productsReducer from './productsRedux';
+import categoriesReducer from './categoriesRedux';
 
 // define reducers
 const reducers = {
