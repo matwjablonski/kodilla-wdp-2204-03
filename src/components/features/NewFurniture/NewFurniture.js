@@ -5,7 +5,6 @@ import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
 
 import CompareBox from '../CompareBox/CompareBoxContainer.js';
-import { addToCompare, removeFromCompare } from '../../../redux/productsRedux';
 
 class NewFurniture extends React.Component {
   state = {
@@ -22,6 +21,7 @@ class NewFurniture extends React.Component {
   }
 
   handleCompareClick = (id, compare) => {
+    const { addToCompare, removeFromCompare } = this.props;
     if (!compare) {
       addToCompare(id);
     } else {
