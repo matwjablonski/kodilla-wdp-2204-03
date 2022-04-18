@@ -8,6 +8,7 @@
   }
 
   .phoneNumber {
+    text-align: left;
     p {
       margin: 0;
       font-size: 17px;
@@ -71,6 +72,36 @@
           background-color: lighten($primary, 10%);
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .mobileContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+      "a b"
+      "a c"
+    ;
+    .logo {
+      grid-area: a;
+      align-self: start;
+      margin-top: 10px;
+    }
+    .phoneNumber {
+      text-align: right;
+      grid-area: c;
+      justify-self: end;
+      p {
+        font-size: 14px;
+      }    
+    }
+    .cart {
+      grid-area: b;
+      justify-self: end;
+      margin-top: 10px;
     }
   }
 }

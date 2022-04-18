@@ -40,3 +40,19 @@
     }
   }
 }
+
+@media only screen and (max-width: 576px) {
+  .root {
+    span {
+      display: none;  
+    }
+
+    .topOptions ul li {
+      margin-right: 5px;
+    }
+
+    .topMenu ul li {
+      margin-left: 5px;
+    }
+  } 
+}
