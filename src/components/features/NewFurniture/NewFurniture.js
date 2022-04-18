@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
 
+import CompareBox from '../CompareBox/CompareBoxContainer.js';
+import { addToCompare, removeFromCompare } from '../../../redux/productsRedux';
+
 class NewFurniture extends React.Component {
   state = {
     activePage: 0,
@@ -18,8 +21,17 @@ class NewFurniture extends React.Component {
     this.setState({ activeCategory: newCategory });
   }
 
+  handleCompareClick = (id, compare) => {
+    if (!compare) {
+      addToCompare(id);
+    } else {
+      removeFromCompare(id);
+    }
+  };
+
   render() {
     const { categories, products } = this.props;
+
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
@@ -28,7 +40,7 @@ class NewFurniture extends React.Component {
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
-        <li>
+        <li key={i}>
           <a
             onClick={() => this.handlePageChange(i)}
             className={i === activePage && styles.active}
@@ -69,9 +81,12 @@ class NewFurniture extends React.Component {
           <div className='row'>
             {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
               <div key={item.id} className='col-3'>
-                <ProductBox {...item} />
+                <ProductBox {...item} handleCompareClick={this.handleCompareClick} />
               </div>
             ))}
+          </div>
+          <div>
+            <CompareBox />
           </div>
         </div>
       </div>
@@ -98,6 +113,8 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+  addToCompare: PropTypes.func,
+  removeFromCompare: PropTypes.func,
 };
 
 NewFurniture.defaultProps = {

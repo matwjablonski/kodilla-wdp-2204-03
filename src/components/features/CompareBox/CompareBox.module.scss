@@ -1,0 +1,59 @@
+@import "../../../styles/settings.scss";
+
+.root {
+
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 50px;
+  background: rgba(213, 142, 50, 0.7);
+
+  .box {
+    flex-direction: column;
+    display: flex;
+    max-width: 150px;
+    height: 100%;
+    border: 10px solid #fff;
+    position: relative;
+    margin: 0 30px;
+
+    &:hover {
+      cursor: pointer;
+
+      .close {
+        opacity: 6;
+        position: absolute;
+      }
+    }
+  }
+
+  .close {
+    opacity: 0;
+    position: absolute;
+    right: 5px;
+    font-size: 30px;
+  }
+
+  .button {
+    border: 2px solid #fff;
+    color: #292929;
+    padding: 10px;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 5%;
+
+    &:hover {
+      background-color: $primary;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+  }
+
+  .description{
+    padding-top: 180px;
+    text-align: center;
+  }
+
+}
