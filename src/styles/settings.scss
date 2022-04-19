@@ -1,9 +1,9 @@
 // NOTE: DO NOT use the main color variables in files,
 //  use the variables assigned to the components below
-$whide: #ffffff;
+$white: #ffffff;
 $darkGray: #2a2a2a;
 $darkOrage: #d58e32;
-$liteGray: #a9a9a9;
+$lightGray: #a9a9a9;
 $gray-1: #e0e3ed;
 $gray-2: rgb(216, 216, 216);
 $gray-4: rgb(169, 169, 169);
@@ -12,40 +12,41 @@ $gray-6: #363636;
 // components varibles
 
 $header-topbar-bg: $gray-5;
-$header-topbar-color: $whide;
+$header-topbar-color: $white;
 
-$menubar-bg: $whide;
+$menuBar-bg: $white;
+$menuBar-box: $darkGray;
 
 $companyClaim-phoneNumber-color: $gray-2;
-$companyClaim-cardBox-color: $whide;
+$companyClaim-cardBox-color: $white;
 $companyClaim-cardCouter-color: $gray-1;
 
 $footer-claim-bg: $darkGray;
 $footer-bg: $gray-5;
-$footer-menuWrapper-color: $whide;
+$footer-menuWrapper-color: $white;
 $footer-menuWrapper-change: $gray-4;
 $footer-copyright: $gray-4;
 $footer-socialmedia: $gray-4;
 
 $furniture-border-color: $gray-2;
 $furniture-menu-color: $darkGray;
-$furniture-dots-bg: $whide;
+$furniture-dots-bg: $white;
 
-$productBox-bg: $whide;
+$productBox-bg: $white;
 $productBox-border: $gray-2;
 $productBox-photo-bg: $gray-2;
 $productBox-sale-bg: $darkGray;
-$productBox-sale-text: $whide;
+$productBox-sale-text: $white;
 $productBox-stars-color: $darkGray;
 $productBox-line-border: $darkGray;
 
-$featureBox-border: $liteGray;
-$featureBox-bg: $whide;
-$featureBox-content-text:$darkGray;
-$featureBox-iconWrapper-color: $whide;
+$featureBox-border: $lightGray;
+$featureBox-bg: $white;
+$featureBox-content-text: $darkGray;
+$featureBox-iconWrapper-color: $white;
 
 $button-bg: $darkGray;
-$button-color-text: $whide;
+$button-color-text: $white;
 
 $primary: $darkOrage;
 $header-bg: $gray-5;

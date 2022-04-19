@@ -12,7 +12,7 @@
   padding: 10px 30px;
 
   &:not(.noHover):hover {
-    color: $button-color-text !important;
+    color: $button-color-text;
     background-color: $primary;
     text-decoration: none;
   }
