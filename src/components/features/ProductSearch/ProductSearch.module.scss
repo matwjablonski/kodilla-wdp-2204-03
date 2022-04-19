@@ -14,7 +14,7 @@
 
     &:hover {
       background-color: $primary;
-      color: #ffff;
+      color: $product-search-hover;
     }
 
     .icon:first-child {
@@ -43,7 +43,7 @@
         position: absolute;
         display: block;
         color:black;
-        background-color: #ffff;
+        background-color: $product-search-hover;
         border: solid 1px #292929;
         text-align: center;
         top: 0;
@@ -69,7 +69,7 @@
 
           &:hover {
             background-color: $primary;
-            color: #ffff;
+            color: $product-search-hover;
           }
         }
       }
