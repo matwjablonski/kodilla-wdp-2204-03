@@ -1,15 +1,15 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  background-color: $productBox-bg;
-  border: 1px solid $productBox-border;
+  background-color: $product-box-bg;
+  border: 1px solid $product-box-border;
   margin-bottom: 2rem;
 
   .photo {
     position: relative;
     padding: 80% 10px 0 10px;
     background: {
-      color: $productBox-photo-bg;
+      color: $product-box-photo-bg;
       size: contain;
       position: center;
       repeat: no-repeat;
@@ -22,9 +22,9 @@
       top: -30px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: $productBox-sale-bg;
+      background-color: $product-box-sale-bg;
       border-radius: 50%;
-      color: $productBox-sale-text;
+      color: $product-box-sale-text;
       padding: 30px 15px 5px 15px;
     }
 
@@ -48,14 +48,14 @@
     .stars {
       a {
         text-decoration: none;
-        color: $productBox-stars-color;
+        color: $product-box-stars-color;
       }
     }
   }
 
   .line {
     margin: 0 10px;
-    border-bottom: 1px solid $productBox-line-border;
+    border-bottom: 1px solid $product-box-line-border;
     position: relative;
 
     &::before {
