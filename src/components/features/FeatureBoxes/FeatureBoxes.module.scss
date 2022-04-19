@@ -2,18 +2,4 @@
 
 .root {
   padding: 5rem 0;
-
-  a:hover {
-    text-decoration: none;
-    p {
-      color: $primary;
-    }
-    h5 {
-      color: $primary;
-    }
-    ::after {
-      background-color: $primary;
-    }
-  }
 }
-

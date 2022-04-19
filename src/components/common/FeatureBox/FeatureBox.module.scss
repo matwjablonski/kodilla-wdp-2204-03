@@ -61,18 +61,22 @@
     }
   }
 
-  &.active {
+  &:hover {
     .iconWrapper {
       color: #ffffff;
-
+    
       &::after {
         background-color: $primary;
         border-color: $primary;
       }
     }
-
+    
     .content {
       color: $primary;
     }
   }
+}
+
+a:hover {
+  text-decoration: none;
 }
