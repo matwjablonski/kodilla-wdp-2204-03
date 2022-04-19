@@ -82,9 +82,10 @@
   .buttons {
     visibility: visible;
   }
+
   .price {
     div {
-      background-color: #d58e32;
+      background-color: $primary;
     }
   }
 }
