@@ -16,7 +16,7 @@ const Footer = ({ children }) => (
   <footer className={styles.root}>
     <div className={styles.footerMenu}>
       <div className='container'>
-        <div className={`row ${styles.mobileContainer}`}>
+        <div className='row'>
           <div className='col'>
             <div className={styles.menuWrapper}>
               <h6>Information</h6>
