@@ -1,13 +1,58 @@
+// NOTE: DO NOT use the main color variables in files,
+//  use the variables assigned to the components below
+$white: #ffffff;
+$dark-gray: #2a2a2a;
+$dark-orage: #d58e32;
+$light-gray: #a9a9a9;
+$gray-1: #e0e3ed;
+$gray-2: rgb(216, 216, 216);
+$gray-4: rgb(169, 169, 169);
+$gray-5:  #434343;
+$gray-6: #363636;
+// components varibles
+
+$header-topbar-bg: $gray-5;
+$header-topbar-color: $white;
+
+$menu-bar-bg: $white;
+$menu-bar-box: $dark-gray;
+
+$company-claim-phone-number-color: $gray-2;
+$company-claim-card-box-color: $white;
+$company-claim-card-couter-color: $gray-1;
+
+$footer-claim-bg: $dark-gray;
+$footer-bg: $gray-5;
+$footer-menu-wrapper-color: $white;
+$footer-menu-wrapper-change: $gray-4;
+$footer-copyright: $gray-4;
+$footer-social-media: $gray-4;
+
+$furniture-border-color: $gray-2;
+$furniture-menu-color: $dark-gray;
+$furniture-dots-bg: $white;
+
+$product-box-bg: $white;
+$product-box-border: $gray-2;
+$product-box-photo-bg: $gray-2;
+$product-box-sale-bg: $dark-gray;
+$product-box-sale-text: $white;
+$product-box-stars-color: $dark-gray;
+$product-box-line-border: $dark-gray;
+
+$feature-box-border: $light-gray;
+$feature-box-bg: $white;
+$feature-box-content-text: $dark-gray;
+$feature-box-icon-wrapper-color: $white;
+
+$button-bg: $dark-gray;
+$button-color-text: $white;
+
+$primary: $dark-orage;
+$header-bg: $gray-5;
+
+$text-color: $dark-gray;
+
+$form-border-color: $dark-gray;
+
 $base-padding: 24px;
-
-$header-topbar-bg: #434343;
-$header-bg: #363636;
-
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
-
-$primary: #d58e32;
-
-$text-color: #2a2a2a;
-
-$form-border-color: #292929;
