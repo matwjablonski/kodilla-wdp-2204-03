@@ -80,3 +80,28 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .mobileContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "a b"
+      "c d"
+    ;
+    .boxa{
+      grid-area: a;
+    }
+    .boxb{
+      grid-area: b;
+    }
+    .boxs{
+      grid-area: c;
+    }
+    .boxd{
+      grid-area: d;
+    }
+   
+  }
+}
