@@ -22,7 +22,7 @@ const FeatureBox = ({ icon, children, page }) => (
 FeatureBox.propTypes = {
   children: PropTypes.node,
   icon: PropTypes.object,
-  page: PropTypes.object,
+  page: PropTypes.string,
 };
 
 export default FeatureBox;
