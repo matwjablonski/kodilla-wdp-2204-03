@@ -10,10 +10,12 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+import { randomNumberForImg } from '../../../utils/randomNumberForImg';
 
 const ProductBox = ({ name, price, promo, stars }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
+      <img alt={name} src={'/images/furniture/' + randomNumberForImg() + '.jpg'} />
       {promo && <div className={styles.sale}>{promo}</div>}
       <div className={styles.buttons}>
         <Button variant='small'>Quick View</Button>
