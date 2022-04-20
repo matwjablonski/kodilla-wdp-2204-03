@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styles from './FeatureBox.module.scss';
 
-const FeatureBox = ({ icon, children }) => (
-  <Link to='/'>
+const FeatureBox = ({ icon, children, page }) => (
+  <Link to={page}>
     <div className={styles.root}>
       {icon && (
         <div className={styles.iconWrapper}>
@@ -22,7 +22,7 @@ const FeatureBox = ({ icon, children }) => (
 FeatureBox.propTypes = {
   children: PropTypes.node,
   icon: PropTypes.object,
-  active: PropTypes.bool,
+  page: PropTypes.object,
 };
 
 export default FeatureBox;
