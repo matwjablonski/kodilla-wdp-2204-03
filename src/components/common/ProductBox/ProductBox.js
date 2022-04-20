@@ -65,7 +65,6 @@ ProductBox.propTypes = {
   price: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
-
   id: PropTypes.string,
   compare: PropTypes.bool,
   handleCompareClick: PropTypes.func,
