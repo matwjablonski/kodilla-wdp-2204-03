@@ -75,4 +75,18 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .price {
+    display: flex;
+    align-items: center;
+  }
+
+  .oldPrice{   
+    align-items: center;
+    margin-right: 10px;   
+    color: darkgray;
+    height: 100%;
+    text-decoration: line-through;
+    text-decoration-color: black;
+  }
 }
