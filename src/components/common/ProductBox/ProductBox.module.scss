@@ -76,13 +76,13 @@
     align-items: center;
   }
 
-  .outlines .selected{
+  .outlines .selected {
     background-color: $primary;
-    border-color: white;
-    color: white;
+    border-color: $product-box-selected-color;
+    color: $product-box-selected-color;
   }
 
-  .outlines .state:hover{
+  .outlines .state:hover {
     background-color: $primary;
     border-color: $primary;
   }

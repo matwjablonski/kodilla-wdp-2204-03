@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
-
 import CompareBox from '../CompareBox/CompareBoxContainer.js';
 
 class NewFurniture extends React.Component {

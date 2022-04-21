@@ -8,16 +8,13 @@ export const getNew = ({ products }) =>
 export const getCompare = ({ products }) =>
   products.filter(product => product.compare === true);
 
-// action name creator
 const reducerName = 'product';
 const createActionName = name => `app/${reducerName}/${name}`;
 
-//action type
 export const ADD_TO_COMPARE = createActionName('ADD_TO_COMPARE');
 export const REMOVE_FROM_COMPARE = createActionName('REMOVE_FROME_COMPARE');
 export const REMOVE_ITEM = createActionName('REMOVE_ITEM');
 
-// action creators
 export const addToCompare = payload => ({ payload, type: ADD_TO_COMPARE });
 export const removeFromCompare = payload => ({ payload, type: REMOVE_FROM_COMPARE });
 export const removeItem = payload => ({ payload, type: REMOVE_ITEM });
@@ -28,7 +25,7 @@ export default function reducer(statePart = [], action = {}) {
     case ADD_TO_COMPARE: {
       let compareCount = 0;
       for (let product of statePart) {
-        if (product.compare === true) {
+        if (product.compare) {
           compareCount++;
         }
       }

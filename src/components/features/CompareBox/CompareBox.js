@@ -28,9 +28,8 @@ const CompareBox = ({ getCompare, removeItem }) => {
         <Button className={styles.button}>Compare</Button>
       </div>
     );
-  } else {
-    return '';
   }
+  return '';
 };
 
 export default CompareBox;
