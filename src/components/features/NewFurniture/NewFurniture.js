@@ -8,6 +8,10 @@ class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
+    viewportWidth: window.innerWidth,
+    desktop: false,
+    tablet: false,
+    mobile: false,
   };
 
   handlePageChange(newPage) {
@@ -18,9 +22,42 @@ class NewFurniture extends React.Component {
     this.setState({ activeCategory: newCategory });
   }
 
+  componentDidMount() {
+    this.updateViewportWidth();
+    window.addEventListener('resize', this.updateViewportWidth);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateViewportWidth);
+  }
+
+  updateViewportWidth = () => {
+    this.setState({ viewportWidth: window.innerWidth });
+    this.handleUpdateWidth();
+  };
+
+  handleUpdateWidth = () => {
+    if (this.state.viewportWidth >= 922) {
+      this.setState({ desktop: true, tablet: false, mobile: false });
+    } else if (this.state.viewportWidth >= 768 && this.state.viewportWidth < 992) {
+      this.setState({ desktop: false, tablet: true, mobile: false });
+    } else if (this.state.viewportWidth >= 568 && this.state.viewportWidth < 768) {
+      this.setState({ desktop: false, tablet: false, mobile: true });
+    }
+  };
+
   render() {
     const { categories, products } = this.props;
-    const { activeCategory, activePage } = this.state;
+    const { activeCategory, activePage, desktop, tablet, mobile } = this.state;
+    const classes = [];
+
+    if (desktop) {
+      classes.push('col-3');
+    } else if (tablet) {
+      classes.push('col-6');
+    } else if (mobile) {
+      classes.push('col-12');
+    }
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
@@ -68,7 +105,7 @@ class NewFurniture extends React.Component {
           </div>
           <div className='row'>
             {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-3'>
+              <div key={item.id} className={classes}>
                 <ProductBox {...item} />
               </div>
             ))}
