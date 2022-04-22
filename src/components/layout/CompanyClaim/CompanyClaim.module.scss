@@ -12,7 +12,7 @@
       margin: 0;
       font-size: 17px;
       line-height: 42px;
-      color: rgb(216, 216, 216);
+      color: $companyClaim-phoneNumber-color;
       font-weight: 500;
 
       .icon {
@@ -28,7 +28,7 @@
   .cart {
     .cartBox {
       display: inline-flex;
-      color: #ffffff;
+      color: $companyClaim-cardBox-color;
       position: relative;
       text-decoration: none; 
       
@@ -40,7 +40,7 @@
         background-color: $header-bg;
         align-items: center;
         font-size: 14px;
-        color: rgb(224, 227, 237);
+        color: $companyClaim-cardCouter-color;
         z-index: 1;
         min-width: 20px;
       }
