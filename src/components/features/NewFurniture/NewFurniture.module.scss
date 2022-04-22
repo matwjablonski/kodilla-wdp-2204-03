@@ -104,14 +104,21 @@
 @media (max-width: 575px) {
   .root {
     .panelBar {
+
       .heading {
         text-align: center;
       }
       .menu {
         text-align: center;
         padding-top: 15px;
-        padding-left: 15%;
-      }
+        padding-right: 15%;
+        ul {
+          li {
+            a {
+              font-size: 15px;
+            }
+          }
+        }
       .dots {
         position: relative;
 
@@ -121,6 +128,7 @@
       }
     }
   }
+}
 }
 
 @media (max-width: 767px) {
@@ -132,7 +140,7 @@
       .menu {
         text-align: center;
         padding-top: 15px;
-        padding-left: 15%;
+        padding-left: 20%;
       }
       .dots {
         position: relative;
