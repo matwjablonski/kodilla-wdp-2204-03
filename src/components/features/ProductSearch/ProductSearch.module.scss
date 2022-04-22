@@ -64,3 +64,29 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .root {
+    display: flex;
+    flex-direction: column;
+    border: none;
+
+    .category {
+      border-right: 0;
+    
+      select {
+        border: 1px solid $form-border-color;
+        margin-left: 5px;
+      }
+    
+      .icon:last-child {
+        position: relative;
+        padding-right: 5px;
+      }
+    }
+    
+    .searchField {
+      padding-top: 20px;
+    }
+  }
+}
