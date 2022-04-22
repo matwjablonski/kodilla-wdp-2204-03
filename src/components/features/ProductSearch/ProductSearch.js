@@ -7,7 +7,13 @@ import { faListUl, faSearch, faCaretDown } from '@fortawesome/free-solid-svg-ico
 import styles from './ProductSearch.module.scss';
 
 const ProductSearch = () => {
-  const selects = ['Bad', 'Sofa', 'Chair', 'Dining', 'Table'];
+  const selects = [
+    { id: 1, name: 'Bad' },
+    { id: 2, name: 'Sofa' },
+    { id: 3, name: 'Chair' },
+    { id: 4, name: 'Dining' },
+    { id: 5, name: 'Table' },
+  ];
 
   return (
     <form action='' className={styles.root}>
@@ -17,9 +23,9 @@ const ProductSearch = () => {
           <ul>
             <li>
               Select a category
-              <ul>
+              <ul key={selects.id}>
                 {selects.map(select => (
-                  <li key={selects.toString()}>{select}</li>
+                  <li key={select.id}>{select.name}</li>
                 ))}
               </ul>
             </li>
