@@ -12,7 +12,8 @@ import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons'
 import Button from '../Button/Button';
 import { randomNumberForImg } from '../../../utils/randomNumberForImg';
 
-const ProductBox = ({ name, price, promo, stars, compare, handleCompareClick, id }) => (
+const ProductBox = ({ name, price, promo, stars, compare, handleCompareClick, id, isFavorite}) => (
+
   <div className={styles.root}>
     <div className={styles.photo}>
       <img alt={name} src={'/images/furniture/' + randomNumberForImg() + '.jpg'} />
@@ -41,7 +42,7 @@ const ProductBox = ({ name, price, promo, stars, compare, handleCompareClick, id
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline'>
+        <Button variant='outline' className={isFavorite ? styles.isFavorite : ''}>
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
         <Button
@@ -70,6 +71,7 @@ ProductBox.propTypes = {
   id: PropTypes.string,
   compare: PropTypes.bool,
   handleCompareClick: PropTypes.func,
+  isFavorite: PropTypes.bool,
 };
 
 export default ProductBox;

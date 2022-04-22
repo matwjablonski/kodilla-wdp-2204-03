@@ -98,6 +98,12 @@
   }
 }
 
+.isFavorite,
+.addToCompare {
+  color: $form-border-color;
+  background-color: $primary;
+}
+
 .root:hover {
   .buttons {
     visibility: visible;
