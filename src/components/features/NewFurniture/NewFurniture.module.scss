@@ -104,9 +104,38 @@
 @media (max-width: 575px) {
   .root {
     .panelBar {
+      .heading {
+        text-align: center;
+      }
+      .menu {
+        text-align: center;
+        padding-top: 15px;
+        padding-left: 15%;
+      }
       .dots {
         position: relative;
+
+        ul {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .root {
+    .panelBar {
+      .heading {
         text-align: center;
+      }
+      .menu {
+        text-align: center;
+        padding-top: 15px;
+        padding-left: 15%;
+      }
+      .dots {
+        position: relative;
 
         ul {
           padding: 0;
