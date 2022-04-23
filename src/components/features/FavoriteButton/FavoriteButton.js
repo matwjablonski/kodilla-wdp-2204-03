@@ -21,7 +21,7 @@ const FavoritesButton = ({ favorite, id }) => {
       onClick={e => handleClickFavorite(id, e)}
       className={favorite && styles.favorite}
     >
-      <FontAwesomeIcon icon={faHeart}>Add to compare</FontAwesomeIcon>
+      <FontAwesomeIcon icon={faHeart}>Add to favorite</FontAwesomeIcon>
     </Button>
   );
 };
