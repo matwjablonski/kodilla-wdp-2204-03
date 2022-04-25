@@ -42,9 +42,9 @@
       &:hover ul {
         position: absolute;
         display: block;
-        color:black;
+        color: $product-search-color;
         background-color: $product-search-hover;
-        border: solid 1px #292929;
+        border: solid 1px $product-search-border;
         text-align: center;
         top: 0;
         right: 0;

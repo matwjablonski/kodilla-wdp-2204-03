@@ -1,6 +1,7 @@
 // NOTE: DO NOT use the main color variables in files,
 //  use the variables assigned to the components below
 $white: #ffffff;
+$black: #000;
 $dark-gray: #2a2a2a;
 $dark-orage: #d58e32;
 $light-gray: #a9a9a9;
@@ -9,6 +10,7 @@ $gray-2: rgb(216, 216, 216);
 $gray-4: rgb(169, 169, 169);
 $gray-5:  #434343;
 $gray-6: #363636;
+$gray-7: #292929;
 // components varibles
 
 $header-topbar-bg: $gray-5;
@@ -41,6 +43,8 @@ $product-box-stars-color: $dark-gray;
 $product-box-line-border: $dark-gray;
 
 $product-search-hover: $white;
+$product-search-border: $gray-7;
+$product-search-color: $black;
 
 $feature-box-border: $light-gray;
 $feature-box-bg: $white;
