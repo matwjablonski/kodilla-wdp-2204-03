@@ -119,3 +119,22 @@
     }
   }
 }
+
+@media only screen and (max-width: 450px) {
+  .root {
+    .socialMedia {
+      margin-right: 0;
+    }
+  
+    .socialIcon { 
+      display: grid;
+      grid-template-columns: repeat(3, 30px);
+      float: right;
+
+      li {
+        justify-self: end;
+      }
+    }  
+  }
+}
+  

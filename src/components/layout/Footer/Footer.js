@@ -110,7 +110,7 @@ const Footer = ({ children }) => (
             <p>©Copyright 2016 Bazar | All Rights Reserved</p>
           </div>
           <div className={'col text-right ' + styles.socialMedia}>
-            <ul>
+            <ul className={styles.socialIcon}>
               <li>
                 <a href='#'>
                   <FontAwesomeIcon icon={faTwitter}>Twitter</FontAwesomeIcon>
