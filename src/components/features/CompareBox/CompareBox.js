@@ -3,6 +3,7 @@ import Button from '../../common/Button/Button';
 import styles from './CompareBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
+import PropTypes from 'prop-types';
 
 const CompareBox = ({ getCompare, removeItem }) => {
   const isActive = getCompare.length;
@@ -29,7 +30,13 @@ const CompareBox = ({ getCompare, removeItem }) => {
       </div>
     );
   }
-  return '';
+  return null;
 };
 
+CompareBox.propTypes = {
+  id: PropTypes.string,
+  price: PropTypes.string,
+  getCompare: PropTypes.func,
+  removeItem: PropTypes.func,
+};
 export default CompareBox;
