@@ -9,6 +9,7 @@ $gray-2: rgb(216, 216, 216);
 $gray-4: rgb(169, 169, 169);
 $gray-5:  #434343;
 $gray-6: #363636;
+$transparent-gray: rgb(56 53 53 / 40%);
 // components varibles
 
 $header-topbar-bg: $gray-5;
@@ -27,6 +28,10 @@ $footer-menu-wrapper-color: $white;
 $footer-menu-wrapper-change: $gray-4;
 $footer-copyright: $gray-4;
 $footer-social-media: $gray-4;
+
+$deals-text-light: $white;
+$deals-text-dark: $dark-gray;
+$deals-transparent: $transparent-gray;
 
 $furniture-border-color: $gray-2;
 $furniture-menu-color: $dark-gray;

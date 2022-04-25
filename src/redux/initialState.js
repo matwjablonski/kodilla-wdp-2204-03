@@ -275,6 +275,21 @@ const initialState = {
   cart: {
     products: [],
   },
+  deals: {
+    firstId: 'first-deal',
+    firstDealA: 'Guest room',
+    firstDealB: 'sofa',
+    firstDealC: '-20%',
+    secondId: 'second-deal',
+    secondDealA: 'Office',
+    secondDealB: 'chair',
+    secondDealC: 'collection',
+    secondDealD: '$200.00',
+    thirdId: 'third-deal',
+    thirdDealA: 'Special',
+    thirdDealB: 'collection',
+    thirdDealC: 'Save up 45% of furniture',
+  },
 };
 
 export default initialState;
