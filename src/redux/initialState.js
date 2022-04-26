@@ -275,6 +275,34 @@ const initialState = {
   cart: {
     products: [],
   },
+  promotion: [
+    {
+      id: 'adadca',
+      name: 'Anean Ru Britique',
+      category: 'Chair',
+      promo: 'sale',
+      oldPrice: '$ 350.00',
+      price: '300.00',
+      newFurniture: true,
+      isFavorite: true,
+      compare: true,
+      image:
+        'https://images.pexels.com/photos/11741412/pexels-photo-11741412.jpeg?cs=srgb&dl=pexels-ksenia-chernaya-11741412.jpg&fm=jpg',
+    },
+    {
+      id: 'asdasdasd-2',
+      name: 'indoor',
+      name2: 'furniture',
+      category: 'Sofa',
+      promo: 'sale',
+      description: 'save up to 50% of all furniture',
+      newFurniture: true,
+      isFavorite: true,
+      compare: true,
+      image:
+        'https://images.pexels.com/photos/6934175/pexels-photo-6934175.jpeg?cs=srgb&dl=pexels-max-vakhtbovych-6934175.jpg&fm=jpg',
+    },
+  ],
 };
 
 export default initialState;
