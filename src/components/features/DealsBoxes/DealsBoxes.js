@@ -4,35 +4,37 @@ import PropTypes from 'prop-types';
 import styles from './DealsBoxes.module.scss';
 
 const DealsBoxes = ({ deals }) => {
+  const [firstDeal, secondDeal, thirdDeal] = [...deals];
+
   return (
     <div className={styles.root}>
       <div className='container'>
         <div className={styles.dealsContainer}>
           <div className={styles.leftDeal}>
-            <img alt={deals.firstId} src='/images/Deals/sofa.jpg' />
+            <img alt={firstDeal.firstId} src='/images/Deals/sofa.jpg' />
             <div className={styles.leftOverlay}>
               <div className={styles.leftDealText}>
-                <p>{deals.firstDealA}</p>
-                <p>{deals.firstDealB}</p>
-                <p>{deals.firstDealC}</p>
+                <p>{firstDeal.firstDealA}</p>
+                <p>{firstDeal.firstDealB}</p>
+                <p>{firstDeal.firstDealC}</p>
               </div>
             </div>
           </div>
           <div className={styles.upperRightDeal}>
             <div className={styles.upperDealText}>
-              <p>{deals.secondDealA}</p>
-              <p>{deals.secondDealB}</p>
-              <p>{deals.secondDealC}</p>
-              <p>{deals.secondDealD}</p>
+              <p>{secondDeal.secondDealA}</p>
+              <p>{secondDeal.secondDealB}</p>
+              <p>{secondDeal.secondDealC}</p>
+              <p>{secondDeal.secondDealD}</p>
             </div>
-            <img alt={deals.secondId} src='/images/Deals/chair.jpg' />
+            <img alt={secondDeal.secondId} src='/images/Deals/chair.jpg' />
           </div>
           <div className={styles.lowerRightDeal}>
-            <img alt={deals.thirdId} src='/images/Deals/bed.jpg' />
+            <img alt={thirdDeal.thirdId} src='/images/Deals/bed.jpg' />
             <div className={styles.lowerDealText}>
-              <p>{deals.thirdDealA}</p>
-              <p>{deals.thirdDealB}</p>
-              <p>{deals.thirdDealC}</p>
+              <p>{thirdDeal.thirdDealA}</p>
+              <p>{thirdDeal.thirdDealB}</p>
+              <p>{thirdDeal.thirdDealC}</p>
             </div>
           </div>
         </div>
@@ -42,7 +44,7 @@ const DealsBoxes = ({ deals }) => {
 };
 
 DealsBoxes.propTypes = {
-  deals: PropTypes.object,
+  deals: PropTypes.array,
 };
 
 export default DealsBoxes;
