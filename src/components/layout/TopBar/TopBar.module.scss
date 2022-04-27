@@ -15,6 +15,7 @@
       a {
         color: $header-topbar-color;
         font-size: 13px;
+        @extend %hover-params;
 
         &:hover {
           color: $primary;
@@ -39,4 +40,30 @@
       margin-right: 5px;
     }
   }
+}
+
+@media only screen and (max-width: 576px) {
+  .root {
+    span {
+      display: none;  
+    }
+
+    .topOptions {
+      margin-left: 5px;
+      padding: 0;
+
+      ul li {
+        margin-right: 5px;
+      }
+    }
+
+    .topMenu {
+      padding: 0;
+      margin-right: 5px;
+
+      ul li {
+        margin-left: 5px;
+      }
+    }
+  } 
 }

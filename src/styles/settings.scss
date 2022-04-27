@@ -41,6 +41,7 @@ $product-box-stars-color: $dark-gray;
 $product-box-line-border: $dark-gray;
 $product-box-old-price: $light-gray;
 
+
 $feature-box-border: $light-gray;
 $feature-box-bg: $white;
 $feature-box-content-text: $dark-gray;
@@ -48,6 +49,10 @@ $feature-box-icon-wrapper-color: $white;
 
 $button-bg: $dark-gray;
 $button-color-text: $white;
+
+%hover-params {
+  transition: all 0.50s;
+}
 
 $primary: $dark-orage;
 $header-bg: $gray-5;

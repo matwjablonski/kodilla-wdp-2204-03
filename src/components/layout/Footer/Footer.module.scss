@@ -20,7 +20,9 @@
           a {
             font-size: 14px;
             line-height: 30px;
-            color: $footer-menu-wrapper-change;
+            color: rgb(169, 169, 169);
+            @extend %hover-params;
+
 
             &:hover {
               color: $footer-menu-wrapper-color;
