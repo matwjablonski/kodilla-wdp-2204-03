@@ -36,7 +36,6 @@ const StarRating = ({ id, stars, userRating }) => {
       {[1, 2, 3, 4, 5].map(i => (
         <button
           key={i}
-          id={id}
           className={(userRating || mouseOver) && styles.userRating}
           onMouseOver={() => handleOver(i)}
           onMouseLeave={() => handleLeave()}
