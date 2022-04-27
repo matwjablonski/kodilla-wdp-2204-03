@@ -10,10 +10,12 @@ const reducerName = 'product';
 const createActionName = name => `app/${reducerName}/${name}`;
 
 /* action types */
-const ADD_USER_STAR = createActionName('ADD_USER_STAR');
 
-/* action creators */
+const ADD_USER_STAR = createActionName('ADD_USER_STAR');
 export const addFavoriteStar = payload => ({ payload, type: ADD_USER_STAR });
+
+const TRIGGER_FAVORITE = createActionName('TRIGER_FAVORITE');
+export const triggerFavorite = payload => ({ payload, type: TRIGGER_FAVORITE });
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
@@ -22,6 +24,10 @@ export default function reducer(statePart = [], action = {}) {
       return statePart.map(product =>
         product.id === action.payload.id
           ? { ...product, userRating: true, stars: action.payload.i }
+    case TRIGGER_FAVORITE:
+      return statePart.map(product =>
+        product.id === action.payload
+          ? { ...product, isFavorite: !product.isFavorite }
           : product
       );
     default:

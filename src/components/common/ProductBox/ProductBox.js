@@ -19,6 +19,7 @@ const ProductBox = ({
   addToCompare,
   userRating,
 }) => (
+
   <div className={styles.root}>
     <div className={styles.photo}>
       <img alt={name} src={'/images/furniture/' + randomNumberForImg() + '.jpg'} />
@@ -37,9 +38,7 @@ const ProductBox = ({
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline' className={isFavorite ? styles.isFavorite : ''}>
-          <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-        </Button>
+        <FavoritesButton favorite={isFavorite} id={id} />
         <Button variant='outline' className={addToCompare ? styles.addToCompare : ''}>
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
