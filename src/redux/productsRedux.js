@@ -24,6 +24,8 @@ export default function reducer(statePart = [], action = {}) {
       return statePart.map(product =>
         product.id === action.payload.id
           ? { ...product, userRating: true, stars: action.payload.i }
+          : product
+      );
     case TRIGGER_FAVORITE:
       return statePart.map(product =>
         product.id === action.payload
