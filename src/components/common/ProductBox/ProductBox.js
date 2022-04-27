@@ -14,6 +14,7 @@ import { randomNumberForImg } from '../../../utils/randomNumberForImg';
 import FavoritesButton from '../../features/FavoriteButton/FavoriteButton';
 
 const ProductBox = ({
+  id,
   name,
   price,
   promo,
@@ -22,7 +23,6 @@ const ProductBox = ({
   addToCompare,
   oldPrice,
 }) => (
-
   <div className={styles.root}>
     <div className={styles.photo}>
       <img alt={name} src={'/images/furniture/' + randomNumberForImg() + '.jpg'} />
