@@ -8,6 +8,7 @@
   }
 
   .phoneNumber {
+    text-align: left;
     p {
       margin: 0;
       font-size: 17px;
@@ -58,6 +59,7 @@
         top: -13px;
         text-align: left;
 
+
         .icon {
           margin-left: 15px;
           margin-top: 14px
@@ -69,6 +71,46 @@
           background-color: lighten($primary, 10%);
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .mobileContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+      "a b"
+      "a c"
+    ;
+
+    .logo {
+      grid-area: a;
+      align-self: start;
+      margin-top: 10px;
+      margin-left: 10px;
+      padding: 0;
+    }
+
+    .phoneNumber {
+      grid-area: c;
+      text-align: right;  
+      justify-self: end;
+
+      p {
+        font-size: 14px;
+
+        .icon {
+          margin-right: 0;
+        }
+      }    
+    }
+
+    .cart {
+      grid-area: b;
+      justify-self: end;
+      margin-top: 10px;
     }
   }
 }
