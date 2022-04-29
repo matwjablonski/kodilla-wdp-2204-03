@@ -17,6 +17,7 @@ const ProductBox = ({
   isFavorite,
   addToCompare,
   userRating,
+  oldPrice,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -42,6 +43,7 @@ const ProductBox = ({
         </Button>
       </div>
       <div className={styles.price}>
+        {oldPrice && <div className={styles.oldPrice}>$ {oldPrice}</div>}
         <Button noHover variant='small'>
           $ {price}
         </Button>
@@ -60,6 +62,7 @@ ProductBox.propTypes = {
   isFavorite: PropTypes.bool,
   addToCompare: PropTypes.bool,
   userRating: PropTypes.bool,
+  oldPrice: PropTypes.number,
 };
 
 export default ProductBox;

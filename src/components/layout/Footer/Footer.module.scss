@@ -51,6 +51,8 @@
     }
 
     .copyright {
+      text-align: center;
+
       p {
         margin: 0;
         color: $footer-copyright;
@@ -82,3 +84,59 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .root {
+    .mobileContainer {
+      display: grid;
+      align-items: start;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "a b"
+        "c d"
+      ;
+
+      .info {
+        grid-area: a;
+      }
+
+      .account {
+        grid-area: b;
+      }
+
+      .infoProduct {
+        grid-area: c;
+      }
+
+      .orders {
+        grid-area: d;
+      }
+    }
+
+    .bottomBar {
+      .copyright {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .root {
+    .socialMedia {
+      margin-right: 0;
+    }
+  
+    .socialIcon { 
+      display: grid;
+      grid-template-columns: repeat(3, 30px);
+      float: right;
+
+      li {
+        justify-self: end;
+      }
+    }  
+  }
+}
+  
