@@ -41,6 +41,7 @@ $product-box-sale-bg: $dark-gray;
 $product-box-sale-text: $white;
 $product-box-stars-color: $dark-gray;
 $product-box-line-border: $dark-gray;
+$product-box-stars-color-active: $dark-orage;
 
 $product-search-hover: $white;
 $product-search-border: $gray-7;
@@ -55,6 +56,10 @@ $button-bg: $dark-gray;
 $button-color-text: $white;
 
 $product-search-hover: $white;
+
+%hover-params {
+  transition: all 0.50s;
+}
 
 $primary: $dark-orage;
 $header-bg: $gray-5;
