@@ -13,7 +13,16 @@ import Button from '../Button/Button';
 import { randomNumberForImg } from '../../../utils/randomNumberForImg';
 import FavoritesButton from '../../features/FavoriteButton/FavoriteButton';
 
-const ProductBox = ({ id, name, price, promo, stars, isFavorite, addToCompare }) => (
+const ProductBox = ({
+  id,
+  name,
+  price,
+  promo,
+  stars,
+  isFavorite,
+  addToCompare,
+  oldPrice,
+}) => (
   <div className={styles.root}>
     <div className={styles.photo}>
       <img alt={name} src={'/images/furniture/' + randomNumberForImg() + '.jpg'} />
@@ -48,6 +57,7 @@ const ProductBox = ({ id, name, price, promo, stars, isFavorite, addToCompare })
         </Button>
       </div>
       <div className={styles.price}>
+        {oldPrice && <div className={styles.oldPrice}>$ {oldPrice}</div>}
         <Button noHover variant='small'>
           $ {price}
         </Button>
@@ -65,6 +75,7 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   isFavorite: PropTypes.bool,
   addToCompare: PropTypes.bool,
+  oldPrice: PropTypes.number,
 };
 
 export default ProductBox;
