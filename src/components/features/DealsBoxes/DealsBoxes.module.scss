@@ -117,8 +117,9 @@
         display: grid;
         grid-template-columns: 150px 160px;
         grid-template-rows: 40% 40%;
-        bottom: 5%;
-        left: 40%;
+        bottom: 50%;
+        left: 70%;
+        transform: translate(-50%, 50%);
 
         p {
           font-size: 25px;
@@ -138,8 +139,8 @@
       }
 
       img {
-        object-fit: cover;
-        object-position: top;
+        object-fit: scale-down;
+        object-position: left;
         height: 100%;
         width: 100%;
       }

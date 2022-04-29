@@ -277,23 +277,16 @@ const initialState = {
   },
   deals: [
     {
-      firstId: 'first-deal',
-      firstDealA: 'Guest room',
-      firstDealB: 'sofa',
-      firstDealC: '-20%',
+      id: 'first-deal',
+      deal: ['Guest room', 'sofa', '-20%'],
     },
     {
-      secondId: 'second-deal',
-      secondDealA: 'Office',
-      secondDealB: 'chair',
-      secondDealC: 'collection',
-      secondDealD: '$200.00',
+      id: 'second-deal',
+      deal: ['Office', 'chair', 'collection', '$200.00'],
     },
     {
-      thirdId: 'third-deal',
-      thirdDealA: 'Special',
-      thirdDealB: 'collection',
-      thirdDealC: 'Save up 45% of furniture',
+      id: 'third-deal',
+      deal: ['Special', 'collection', 'Save up 45% of furniture'],
     },
   ],
 };
