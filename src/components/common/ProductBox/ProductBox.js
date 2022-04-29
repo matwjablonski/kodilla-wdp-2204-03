@@ -8,9 +8,10 @@ import {
   faExchangeAlt,
   faShoppingBasket,
 } from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import { randomNumberForImg } from '../../../utils/randomNumberForImg';
+import FavoritesButton from '../../features/FavoriteButton/FavoriteButton';
 
 const ProductBox = ({
   name,
@@ -50,9 +51,7 @@ const ProductBox = ({
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline' className={isFavorite ? styles.isFavorite : ''}>
-          <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-        </Button>
+        <FavoritesButton favorite={isFavorite} id={id} />
         <Button
           className={compare ? styles.selected : styles.state}
           onClick={() => handleCompareClick(id, compare)}
@@ -71,6 +70,7 @@ const ProductBox = ({
 );
 
 ProductBox.propTypes = {
+  id: PropTypes.string,
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
