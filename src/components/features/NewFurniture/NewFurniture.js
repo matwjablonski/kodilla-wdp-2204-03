@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
 import CompareBox from '../CompareBox/CompareBoxContainer.js';
+import Swipe from 'react-easy-swipe';
 
 class NewFurniture extends React.Component {
   state = {
@@ -25,6 +26,17 @@ class NewFurniture extends React.Component {
       addToCompare(id);
     } else {
       removeFromCompare(id);
+    }
+  };
+  handleLeftAction = pagesCount => {
+    if (this.state.activePage < pagesCount - 1) {
+      this.handlePageChange(this.state.activePage + 1);
+    }
+  };
+
+  handleRightAction = () => {
+    if (this.state.activePage >= 1) {
+      this.handlePageChange(this.state.activePage - 1);
     }
   };
 
@@ -51,29 +63,35 @@ class NewFurniture extends React.Component {
     }
 
     return (
-      <div className={styles.root}>
-        <div className='container'>
-          <div className={styles.panelBar}>
-            <div className='row no-gutters align-items-end'>
-              <div className={'col-auto ' + styles.heading}>
-                <h3>New furniture</h3>
-              </div>
-              <div className={'col ' + styles.menu}>
-                <ul>
-                  {categories.map(item => (
-                    <li key={item.id}>
-                      <a
-                        className={item.id === activeCategory && styles.active}
-                        onClick={() => this.handleCategoryChange(item.id)}
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className={'col-auto ' + styles.dots}>
-                <ul>{dots}</ul>
+      <Swipe
+        allowMouseEvents={true}
+        onSwipeLeft={() => this.handleLeftAction(pagesCount)}
+        onSwipeRight={() => this.handleRightAction()}
+      >
+        <div className={styles.root}>
+          <div className='container'>
+            <div className={styles.panelBar}>
+              <div className='row no-gutters align-items-end'>
+                <div className={'col-auto ' + styles.heading}>
+                  <h3>New furniture</h3>
+                </div>
+                <div className={'col ' + styles.menu}>
+                  <ul>
+                    {categories.map(item => (
+                      <li key={item.id}>
+                        <a
+                          className={item.id === activeCategory && styles.active}
+                          onClick={() => this.handleCategoryChange(item.id)}
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className={'col-auto ' + styles.dots}>
+                  <ul>{dots}</ul>
+                </div>
               </div>
             </div>
           </div>
@@ -88,13 +106,16 @@ class NewFurniture extends React.Component {
             <CompareBox />
           </div>
         </div>
-      </div>
+      </Swipe>
     );
   }
 }
 
 NewFurniture.propTypes = {
   children: PropTypes.node,
+  allowMouseEvents: PropTypes.bool,
+  onSwipeLeft: PropTypes.func,
+  onSwipeRight: PropTypes.func,
   categories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,

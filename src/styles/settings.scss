@@ -40,6 +40,8 @@ $product-box-sale-bg: $dark-gray;
 $product-box-sale-text: $white;
 $product-box-stars-color: $dark-gray;
 $product-box-line-border: $dark-gray;
+$product-box-old-price: $light-gray;
+$product-box-stars-color-active: $dark-orage;
 
 $feature-box-border: $light-gray;
 $feature-box-bg: $white;
@@ -56,6 +58,10 @@ $compare-box-border-color: $white;
 $compare-box-button-color: $dark-gray;
 $compare-box-button-bg-color: $white;
 $compare-box-button-hover: $white;
+
+%hover-params {
+  transition: all 0.50s;
+}
 
 $primary: $dark-orage;
 $header-bg: $gray-5;

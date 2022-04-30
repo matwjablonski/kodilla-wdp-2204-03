@@ -8,9 +8,10 @@ import {
   faExchangeAlt,
   faShoppingBasket,
 } from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import { randomNumberForImg } from '../../../utils/randomNumberForImg';
+import FavoritesButton from '../../features/FavoriteButton/FavoriteButton';
 
 const ProductBox = ({
   name,
@@ -21,6 +22,7 @@ const ProductBox = ({
   handleCompareClick,
   id,
   isFavorite,
+  oldPrice,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -50,9 +52,7 @@ const ProductBox = ({
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline' className={isFavorite ? styles.isFavorite : ''}>
-          <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-        </Button>
+        <FavoritesButton favorite={isFavorite} id={id} />
         <Button
           className={compare ? styles.selected : styles.state}
           onClick={() => handleCompareClick(id, compare)}
@@ -62,6 +62,7 @@ const ProductBox = ({
         </Button>
       </div>
       <div className={styles.price}>
+        {oldPrice && <div className={styles.oldPrice}>$ {oldPrice}</div>}
         <Button noHover variant='small'>
           $ {price}
         </Button>
@@ -71,6 +72,7 @@ const ProductBox = ({
 );
 
 ProductBox.propTypes = {
+  id: PropTypes.string,
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
@@ -80,6 +82,8 @@ ProductBox.propTypes = {
   compare: PropTypes.bool,
   handleCompareClick: PropTypes.func,
   isFavorite: PropTypes.bool,
+  addToCompare: PropTypes.bool,
+  oldPrice: PropTypes.number,
 };
 
 export default ProductBox;

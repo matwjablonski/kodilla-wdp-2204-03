@@ -8,16 +8,21 @@ export const getNew = ({ products }) =>
 export const getCompare = ({ products }) =>
   products.filter(product => product.compare === true);
 
+/* action name creator */
 const reducerName = 'product';
 const createActionName = name => `app/${reducerName}/${name}`;
 
+/* action types */
+const TRIGGER_FAVORITE = createActionName('TRIGER_FAVORITE');
 export const ADD_TO_COMPARE = createActionName('ADD_TO_COMPARE');
 export const REMOVE_FROM_COMPARE = createActionName('REMOVE_FROME_COMPARE');
 export const REMOVE_ITEM = createActionName('REMOVE_ITEM');
 
+/* action creators */
 export const addToCompare = payload => ({ payload, type: ADD_TO_COMPARE });
 export const removeFromCompare = payload => ({ payload, type: REMOVE_FROM_COMPARE });
 export const removeItem = payload => ({ payload, type: REMOVE_ITEM });
+export const triggerFavorite = payload => ({ payload, type: TRIGGER_FAVORITE });
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
@@ -51,6 +56,13 @@ export default function reducer(statePart = [], action = {}) {
         return product;
       });
     }
+
+    case TRIGGER_FAVORITE:
+      return statePart.map(product =>
+        product.id === action.payload
+          ? { ...product, isFavorite: !product.isFavorite }
+          : product
+      );
 
     default:
       return statePart;
