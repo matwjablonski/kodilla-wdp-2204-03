@@ -97,6 +97,19 @@
     background-color: $primary;
     border-color: $primary;
   }
+  .price {
+    display: flex;
+    align-items: center;
+  }
+
+  .oldPrice {
+    align-items: center;
+    margin-right: 10px;   
+    color: $product-box-old-price;
+    height: 100%;
+    text-decoration: line-through;
+    text-decoration-color: $product-box-line-border;
+  } 
 }
 
 .isFavorite,
