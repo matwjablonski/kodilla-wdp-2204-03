@@ -9,6 +9,8 @@ $gray-2: rgb(216, 216, 216);
 $gray-4: rgb(169, 169, 169);
 $gray-5:  #434343;
 $gray-6: #363636;
+$transparent: rgba(255, 255, 255, 0.0);
+$green: #79ae30;
 // components varibles
 
 $header-topbar-bg: $gray-5;
@@ -49,6 +51,20 @@ $gallery-box-anchor-text-color: $dark-gray;
 $gallery-box-anchor-text-color-hover: $dark-orage;
 $gallery-box-anchor-border-color: $light-gray;
 $gallery-box-anchor-border-color-hover: $dark-orage;
+$gallery-box-background-active: $gray-1; 
+$gallery-box-background-transparent: $transparent;
+$gallery-box-background-normal: $white;
+$gallery-box-tooltip-background: $dark-gray;
+$gallery-box-background-circle: $gray-5;
+$gallery-box-price-color: $white;
+$gallery-box-line-secound-color: $gray-2;
+$gallery-box-shadow: $dark-gray;
+$gallery-box-triangle-color: $dark-gray;
+$gallery-box-main-color: $dark-gray;
+$gallery-box-right-price-color: $green;
+$gallery-box-right-furniture-color: $dark-orage;
+$gallery-box-right-button-bg-color: $green;
+$gallery-box-right-button-text-color: $white;
 
 $button-bg: $dark-gray;
 $button-color-text: $white;
