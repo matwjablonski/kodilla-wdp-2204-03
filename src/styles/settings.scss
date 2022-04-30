@@ -48,6 +48,11 @@ $feature-box-icon-wrapper-color: $white;
 $button-bg: $dark-gray;
 $button-color-text: $white;
 
+$brand-border-color: $light-gray;
+$brand-logo-border-color: $light-gray;
+$brand-button-bg: $dark-gray;
+$brands-logoBox-color: $white;
+
 $primary: $dark-orage;
 $header-bg: $gray-5;
 
@@ -60,4 +65,3 @@ $base-padding: 24px;
 %hover-params {
   transition: all 0.50s;
 }
-
