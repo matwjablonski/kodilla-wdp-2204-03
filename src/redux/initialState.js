@@ -292,18 +292,6 @@ const initialState = {
       id: 'brand4',
       image: '../images/brands/brand04.jpeg',
     },
-    {
-      id: 'brand5',
-      image: '../images/brands/brand05.jpeg',
-    },
-    {
-      id: 'brand6',
-      image: '../images/brands/brand06.jpeg',
-    },
-    {
-      id: 'brand7',
-      image: '../images/brands/brand07.jpeg',
-    },
   ],
 };
 
