@@ -41,7 +41,7 @@ class NewFurniture extends React.Component {
     const viewportWidth = this.state.viewportWidth;
     const largeBreakpointSize = 992;
     const mediumBreakpointSize = 768;
-    const smallBreakpointSize = 568;
+    const smallBreakpointSize = 360;
 
     if (viewportWidth >= largeBreakpointSize) {
       this.setState({ desktop: true, tablet: false, mobile: false });
@@ -58,9 +58,19 @@ class NewFurniture extends React.Component {
     }
   }
 
+  assignClass() {
+    if (this.state.desktop) {
+      return 'col-3';
+    } else if (this.state.tablet) {
+      return 'col-6';
+    } else if (this.state.mobile) {
+      return 'col-12';
+    }
+  }
+
   render() {
     const { categories, products } = this.props;
-    const { activeCategory, activePage, desktop, tablet, mobile } = this.state;
+    const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
@@ -108,12 +118,7 @@ class NewFurniture extends React.Component {
           </div>
           <div className='row'>
             {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div
-                key={item.id}
-                className={
-                  desktop ? 'col-3' : tablet ? 'col-6' : mobile ? 'col-12' : ''
-                }
-              >
+              <div key={item.id} className={this.assignClass()}>
                 <ProductBox {...item} />
               </div>
             ))}
