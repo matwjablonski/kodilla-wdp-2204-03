@@ -114,7 +114,7 @@
   }
 
   .price {
-    div:nth-child(2) {
+    div:not(.oldPrice) {
       background-color: $primary;
     }
   }
