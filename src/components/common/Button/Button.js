@@ -27,6 +27,7 @@ const Button = ({ children, variant, noHover, className: propClassName, ...props
 
 Button.propTypes = {
   children: PropTypes.node,
+  hoverOn: PropTypes.bool,
   noHover: PropTypes.bool,
   className: PropTypes.string,
   variant: PropTypes.string,
