@@ -14,13 +14,14 @@ import { randomNumberForImg } from '../../../utils/randomNumberForImg';
 import FavoritesButton from '../../features/FavoriteButton/FavoriteButton';
 
 const ProductBox = ({
-  id,
   name,
   price,
   promo,
   stars,
+  compare,
+  handleCompareClick,
+  id,
   isFavorite,
-  addToCompare,
   oldPrice,
 }) => (
   <div className={styles.root}>
@@ -52,7 +53,11 @@ const ProductBox = ({
     <div className={styles.actions}>
       <div className={styles.outlines}>
         <FavoritesButton favorite={isFavorite} id={id} />
-        <Button variant='outline' className={addToCompare ? styles.addToCompare : ''}>
+        <Button
+          className={compare ? styles.selected : styles.state}
+          onClick={() => handleCompareClick(id, compare)}
+          variant='outline'
+        >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -73,6 +78,9 @@ ProductBox.propTypes = {
   price: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  id: PropTypes.string,
+  compare: PropTypes.bool,
+  handleCompareClick: PropTypes.func,
   isFavorite: PropTypes.bool,
   addToCompare: PropTypes.bool,
   oldPrice: PropTypes.number,

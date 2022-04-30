@@ -3,6 +3,7 @@
 $white: #ffffff;
 $dark-gray: #2a2a2a;
 $dark-orage: #d58e32;
+$ligth-orange: rgba(213, 142, 50, 0.7);
 $light-gray: #a9a9a9;
 $gray-1: #e0e3ed;
 $gray-2: rgb(216, 216, 216);
@@ -49,6 +50,14 @@ $feature-box-icon-wrapper-color: $white;
 
 $button-bg: $dark-gray;
 $button-color-text: $white;
+
+$product-box-selected-color: $white;
+
+$compare-box-root-bg: $ligth-orange;
+$compare-box-border-color: $white;
+$compare-box-button-color: $dark-gray;
+$compare-box-button-bg-color: $white;
+$compare-box-button-hover: $white;
 
 %hover-params {
   transition: all 0.50s;
