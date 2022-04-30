@@ -17,6 +17,7 @@
     border: 10px solid $compare-box-border-color;
     position: relative;
     margin: 0 30px;
+    position: sticky;
 
     &:hover {
       cursor: pointer;
