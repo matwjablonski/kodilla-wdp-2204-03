@@ -11,6 +11,7 @@ $gray-5:  #434343;
 $gray-6: #363636;
 $transparent: rgba(255, 255, 255, 0.0);
 $green: #79ae30;
+$transparent-gray: rgb(56 53 53 / 40%);
 // components varibles
 
 $header-topbar-bg: $gray-5;
@@ -30,6 +31,10 @@ $footer-menu-wrapper-change: $gray-4;
 $footer-copyright: $gray-4;
 $footer-social-media: $gray-4;
 
+$deals-text-light: $white;
+$deals-text-dark: $dark-gray;
+$deals-transparent: $transparent-gray;
+
 $furniture-border-color: $gray-2;
 $furniture-menu-color: $dark-gray;
 $furniture-dots-bg: $white;
@@ -41,6 +46,8 @@ $product-box-sale-bg: $dark-gray;
 $product-box-sale-text: $white;
 $product-box-stars-color: $dark-gray;
 $product-box-line-border: $dark-gray;
+$product-box-old-price: $light-gray;
+$product-box-stars-color-active: $dark-orage;
 
 $feature-box-border: $light-gray;
 $feature-box-bg: $white;
@@ -68,6 +75,10 @@ $gallery-box-right-button-text-color: $white;
 
 $button-bg: $dark-gray;
 $button-color-text: $white;
+
+%hover-params {
+  transition: all 0.50s;
+}
 
 $primary: $dark-orage;
 $header-bg: $gray-5;
