@@ -3,12 +3,17 @@ import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
+import CompareBox from '../CompareBox/CompareBoxContainer.js';
 import Swipe from 'react-easy-swipe';
 
 class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
+    viewportWidth: window.innerWidth,
+    desktop: false,
+    tablet: false,
+    mobile: false,
   };
 
   handlePageChange(newPage) {
@@ -17,6 +22,61 @@ class NewFurniture extends React.Component {
 
   handleCategoryChange(newCategory) {
     this.setState({ activeCategory: newCategory });
+  }
+
+  handleCompareClick = (id, compare) => {
+    const { addToCompare, removeFromCompare } = this.props;
+    if (!compare) {
+      addToCompare(id);
+    } else {
+      removeFromCompare(id);
+    }
+  };
+
+  componentDidMount() {
+    this.updateViewportWidth();
+    window.addEventListener('resize', this.updateViewportWidth);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateViewportWidth);
+  }
+
+  updateViewportWidth() {
+    this.updateViewportWidth = this.updateViewportWidth.bind(this);
+    this.setState({ viewportWidth: window.innerWidth });
+    this.handleUpdateWidth();
+  }
+
+  handleUpdateWidth() {
+    const viewportWidth = this.state.viewportWidth;
+    const largeBreakpointSize = 992;
+    const mediumBreakpointSize = 768;
+    const smallBreakpointSize = 360;
+
+    if (viewportWidth >= largeBreakpointSize) {
+      this.setState({ desktop: true, tablet: false, mobile: false });
+    } else if (
+      this.state.viewportWidth >= mediumBreakpointSize &&
+      viewportWidth < largeBreakpointSize
+    ) {
+      this.setState({ desktop: false, tablet: true, mobile: false });
+    } else if (
+      viewportWidth >= smallBreakpointSize &&
+      viewportWidth < mediumBreakpointSize
+    ) {
+      this.setState({ desktop: false, tablet: false, mobile: true });
+    }
+  }
+
+  assignClass() {
+    if (this.state.desktop) {
+      return 'col-3';
+    } else if (this.state.tablet) {
+      return 'col-6';
+    } else if (this.state.mobile) {
+      return 'col-12';
+    }
   }
 
   handleLeftAction = pagesCount => {
@@ -33,6 +93,7 @@ class NewFurniture extends React.Component {
 
   render() {
     const { categories, products } = this.props;
+
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
@@ -41,7 +102,7 @@ class NewFurniture extends React.Component {
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
-        <li>
+        <li key={i}>
           <a
             onClick={() => this.handlePageChange(i)}
             className={i === activePage && styles.active}
@@ -88,13 +149,20 @@ class NewFurniture extends React.Component {
               {categoryProducts
                 .slice(activePage * 8, (activePage + 1) * 8)
                 .map(item => (
-                  <div key={item.id} className='col-6 col-md-4 col-lg-3'>
-                    <ProductBox {...item} />
+                  <div
+                    key={item.id}
+                    className={this.assignClass() + 'col-6 col-md-4 col-lg-3'}
+                  >
+                    <ProductBox
+                      {...item}
+                      handleCompareClick={this.handleCompareClick}
+                    />
                   </div>
                 ))}
             </div>
           </div>
         </div>
+        <CompareBox />
       </Swipe>
     );
   }
@@ -122,6 +190,8 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+  addToCompare: PropTypes.func,
+  removeFromCompare: PropTypes.func,
 };
 
 NewFurniture.defaultProps = {

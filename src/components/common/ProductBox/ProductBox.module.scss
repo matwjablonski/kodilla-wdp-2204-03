@@ -87,6 +87,16 @@
     align-items: center;
   }
 
+  .outlines .selected {
+    background-color: $primary;
+    border-color: $product-box-selected-color;
+    color: $product-box-selected-color;
+  }
+
+  .outlines .state:hover {
+    background-color: $primary;
+    border-color: $primary;
+  }
   .price {
     display: flex;
     align-items: center;

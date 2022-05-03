@@ -12,6 +12,11 @@
     align-items: center;
     position: relative;
 
+    &:hover {
+      background-color: $primary;
+      color: $product-search-hover;
+    }
+
     .icon:first-child {
       color: $primary;
       position: absolute;
@@ -23,6 +28,51 @@
       position: absolute;
       right: 10px;
       z-index: 0;
+    }
+
+    ul {
+      position: relative;
+      font-size: 14px;
+      outline: none;
+      padding: 10px 30px 10px 35px;
+      margin: 0;
+      z-index: 1;
+      cursor: pointer;
+
+      &:hover ul {
+        position: absolute;
+        display: block;
+        color: $product-search-color;
+        background-color: $product-search-hover;
+        border: solid 1px $product-search-border;
+        text-align: center;
+        top: 0;
+        right: 0;
+        margin-top: 42px;
+        width: 188px;
+        height: 180px;
+      }
+
+      li {
+        display: block;
+        user-select: none;
+      }
+
+      ul {
+        display: none;
+        padding: 0;
+        padding-top: 10px;
+        cursor: pointer;
+
+        li {
+          padding: 5px 0;
+
+          &:hover {
+            background-color: $primary;
+            color: $product-search-hover;
+          }
+        }
+      }
     }
 
     select {
@@ -39,6 +89,12 @@
         color: $primary;
       }
     }
+  }
+
+  .selectField {
+    display: flex;
+    align-items: center;
+    position: relative;
   }
 
   .searchField {
