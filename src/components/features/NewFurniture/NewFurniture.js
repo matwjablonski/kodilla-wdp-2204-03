@@ -23,7 +23,6 @@ class NewFurniture extends React.Component {
     this.setState({ activeCategory: newCategory });
   }
 
-
   componentDidMount() {
     this.updateViewportWidth();
     window.addEventListener('resize', this.updateViewportWidth);
@@ -135,13 +134,15 @@ class NewFurniture extends React.Component {
                 </div>
               </div>
             </div>
-          </div>
-          <div className='row'>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className={this.assignClass()}>
-                <ProductBox {...item} />
-              </div>
-            ))}
+            <div className='row'>
+              {categoryProducts
+                .slice(activePage * 8, (activePage + 1) * 8)
+                .map(item => (
+                  <div key={item.id} className={this.assignClass()}>
+                    <ProductBox {...item} />
+                  </div>
+                ))}
+            </div>
           </div>
         </div>
       </Swipe>
