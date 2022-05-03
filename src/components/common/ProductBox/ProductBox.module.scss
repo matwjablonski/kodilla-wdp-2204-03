@@ -55,13 +55,6 @@
       line-height: 24px;
       letter-spacing: 1px;
     }
-
-    .stars {
-      a {
-        text-decoration: none;
-        color: $product-box-stars-color;
-      }
-    }
   }
 
   .line {
@@ -114,7 +107,7 @@
   }
 
   .price {
-    div {
+    div:not(.oldPrice) {
       background-color: $primary;
     }
   }
