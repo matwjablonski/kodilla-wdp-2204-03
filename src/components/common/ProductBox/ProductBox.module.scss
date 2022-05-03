@@ -114,7 +114,7 @@
   }
 
   .price {
-    div {
+    div:not(.oldPrice) {
       background-color: $primary;
     }
   }
