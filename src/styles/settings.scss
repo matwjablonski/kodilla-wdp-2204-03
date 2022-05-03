@@ -1,5 +1,6 @@
 // NOTE: DO NOT use the main color variables in files,
 //  use the variables assigned to the components below
+$black: #000;
 $white: #ffffff;
 $black: #000;
 $dark-gray: #2a2a2a;
@@ -53,6 +54,19 @@ $feature-box-border: $light-gray;
 $feature-box-bg: $white;
 $feature-box-content-text: $dark-gray;
 $feature-box-icon-wrapper-color: $white;
+
+$promotion-slider: $dark-gray;
+$promotion-color-text: $white;
+$promotion-slick-dots-bg: $white;
+$promotion-stars-color: $dark-gray;
+$promotion-slick-dots-bottom-bg: $dark-gray;
+$promotion-slick-dots-bottom-border: $dark-gray;
+$promotion-button-shop-now-color: $black;
+$promotion-button-shop-now-bg: $white;
+$promotion-old-price-color: $light-gray;
+$promotion-button-bottom-right-left-bg: $black;
+$promotion-button-bottom-right-left-color: $white;
+$promotion-right-site-after-bg: $dark-gray;
 
 $button-bg: $dark-gray;
 $button-color-text: $white;
