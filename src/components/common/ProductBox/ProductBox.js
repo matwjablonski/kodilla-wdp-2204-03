@@ -13,7 +13,17 @@ import Button from '../Button/Button';
 import { randomNumberForImg } from '../../../utils/randomNumberForImg';
 import FavoritesButton from '../../features/FavoriteButton/FavoriteButton';
 
-const ProductBox = ({ id, name, price, promo, stars, isFavorite, addToCompare }) => (
+const ProductBox = ({
+  name,
+  price,
+  promo,
+  stars,
+  compare,
+  handleCompareClick,
+  id,
+  isFavorite,
+  oldPrice,
+}) => (
   <div className={styles.root}>
     <div className={styles.photo}>
       <img alt={name} src={'/images/furniture/' + randomNumberForImg() + '.jpg'} />
@@ -43,11 +53,16 @@ const ProductBox = ({ id, name, price, promo, stars, isFavorite, addToCompare })
     <div className={styles.actions}>
       <div className={styles.outlines}>
         <FavoritesButton favorite={isFavorite} id={id} />
-        <Button variant='outline' className={addToCompare ? styles.addToCompare : ''}>
+        <Button
+          className={compare ? styles.selected : styles.state}
+          onClick={() => handleCompareClick(id, compare)}
+          variant='outline'
+        >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
       <div className={styles.price}>
+        {oldPrice && <div className={styles.oldPrice}>$ {oldPrice}</div>}
         <Button noHover variant='small'>
           $ {price}
         </Button>
@@ -63,8 +78,12 @@ ProductBox.propTypes = {
   price: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  id: PropTypes.string,
+  compare: PropTypes.bool,
+  handleCompareClick: PropTypes.func,
   isFavorite: PropTypes.bool,
   addToCompare: PropTypes.bool,
+  oldPrice: PropTypes.number,
 };
 
 export default ProductBox;

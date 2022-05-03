@@ -1,9 +1,11 @@
 // NOTE: DO NOT use the main color variables in files,
 //  use the variables assigned to the components below
+$black: #000;
 $white: #ffffff;
 $black: #000;
 $dark-gray: #2a2a2a;
 $dark-orage: #d58e32;
+$ligth-orange: rgba(213, 142, 50, 0.7);
 $light-gray: #a9a9a9;
 $gray-1: #e0e3ed;
 $gray-2: rgb(216, 216, 216);
@@ -11,6 +13,7 @@ $gray-4: rgb(169, 169, 169);
 $gray-5:  #434343;
 $gray-6: #363636;
 $gray-7: #292929;
+$transparent-gray: rgb(56 53 53 / 40%);
 // components varibles
 
 $header-topbar-bg: $gray-5;
@@ -30,6 +33,10 @@ $footer-menu-wrapper-change: $gray-4;
 $footer-copyright: $gray-4;
 $footer-social-media: $gray-4;
 
+$deals-text-light: $white;
+$deals-text-dark: $dark-gray;
+$deals-transparent: $transparent-gray;
+
 $furniture-border-color: $gray-2;
 $furniture-menu-color: $dark-gray;
 $furniture-dots-bg: $white;
@@ -41,6 +48,7 @@ $product-box-sale-bg: $dark-gray;
 $product-box-sale-text: $white;
 $product-box-stars-color: $dark-gray;
 $product-box-line-border: $dark-gray;
+$product-box-old-price: $light-gray;
 $product-box-stars-color-active: $dark-orage;
 
 $product-search-hover: $white;
@@ -52,14 +60,41 @@ $feature-box-bg: $white;
 $feature-box-content-text: $dark-gray;
 $feature-box-icon-wrapper-color: $white;
 
+$promotion-slider: $dark-gray;
+$promotion-color-text: $white;
+$promotion-slick-dots-bg: $white;
+$promotion-stars-color: $dark-gray;
+$promotion-slick-dots-bottom-bg: $dark-gray;
+$promotion-slick-dots-bottom-border: $dark-gray;
+$promotion-button-shop-now-color: $black;
+$promotion-button-shop-now-bg: $white;
+$promotion-old-price-color: $light-gray;
+$promotion-button-bottom-right-left-bg: $black;
+$promotion-button-bottom-right-left-color: $white;
+$promotion-right-site-after-bg: $dark-gray;
+
 $button-bg: $dark-gray;
 $button-color-text: $white;
 
 $product-search-hover: $white;
 
+$product-box-selected-color: $white;
+$product-search-hover: $white;
+
+$compare-box-root-bg: $ligth-orange;
+$compare-box-border-color: $white;
+$compare-box-button-color: $dark-gray;
+$compare-box-button-bg-color: $white;
+$compare-box-button-hover: $white;
+
 %hover-params {
   transition: all 0.50s;
 }
+
+$brand-border-color: $light-gray;
+$brand-logo-border-color: $light-gray;
+$brand-button-bg: $dark-gray;
+$brands-logoBox-color: $white;
 
 $primary: $dark-orage;
 $header-bg: $gray-5;
