@@ -1,0 +1,14 @@
+@import "../../../styles/settings.scss";
+
+.stars {
+  button {
+    border: none;
+    background-color: $product-box-bg;
+    text-decoration: none;
+    color: $product-box-stars-color;  
+  }
+  
+  .userRating {
+    color: $product-box-stars-color-user;
+  }
+}
