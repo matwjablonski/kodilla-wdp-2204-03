@@ -126,8 +126,8 @@
     .socialMedia {
       margin-right: 0;
     }
-  
-    .socialIcon { 
+
+    .socialIcon {
       display: grid;
       grid-template-columns: repeat(3, 30px);
       float: right;
@@ -135,7 +135,6 @@
       li {
         justify-self: end;
       }
-    }  
+    }
   }
 }
-  

@@ -1,0 +1,58 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 50px;
+  background: $compare-box-root-bg;
+
+  .box {
+    flex-direction: column;
+    display: flex;
+    max-width: 150px;
+    height: 100%;
+    border: 10px solid $compare-box-border-color;
+    position: relative;
+    margin: 0 30px;
+    position: sticky;
+
+    &:hover {
+      cursor: pointer;
+
+      .close {
+        opacity: 1;
+        position: absolute;
+      }
+    }
+  }
+
+  .close {
+    opacity: 0;
+    position: absolute;
+    right: 5px;
+    font-size: 30px;
+  }
+
+  .button {
+    border: 2px solid $compare-box-border-color;
+    color: $compare-box-button-color;
+    padding: 10px;
+    background-color: $compare-box-button-bg-color;
+    text-decoration: none;
+    border-radius: 5%;
+
+    &:hover {
+      background-color: $primary;
+      border: 2px solid $compare-box-button-hover;
+      color: $compare-box-button-hover;
+    }
+  }
+
+  .description {
+    padding-top: 180px;
+    text-align: center;
+  }
+}
