@@ -13,8 +13,9 @@ $gray-4: rgb(169, 169, 169);
 $gray-5:  #434343;
 $gray-6: #363636;
 $gray-7: #292929;
-$transparent-gray: rgb(56, 53, 53);
-
+$transparent: rgba(255, 255, 255, 0.0);
+$green: #79ae30;
+$transparent-gray: rgb(56 53 53 / 40%);
 // components varibles
 
 $header-topbar-bg: $gray-5;
@@ -48,6 +49,7 @@ $product-box-photo-bg: $gray-2;
 $product-box-sale-bg: $dark-gray;
 $product-box-sale-text: $white;
 $product-box-stars-color: $dark-gray;
+$product-box-stars-color-user: $dark-orage;
 $product-box-line-border: $dark-gray;
 $product-box-old-price: $light-gray;
 $product-box-stars-color-active: $dark-orage;
@@ -74,6 +76,25 @@ $promotion-button-bottom-right-left-bg: $black;
 $promotion-button-bottom-right-left-color: $white;
 $promotion-right-site-after-bg: $dark-gray;
 
+$gallery-box-anchor-text-color: $dark-gray;
+$gallery-box-anchor-text-color-hover: $dark-orage;
+$gallery-box-anchor-border-color: $light-gray;
+$gallery-box-anchor-border-color-hover: $dark-orage;
+$gallery-box-background-active: $gray-1;
+$gallery-box-background-transparent: $transparent;
+$gallery-box-background-normal: $white;
+$gallery-box-tooltip-background: $dark-gray;
+$gallery-box-background-circle: $gray-5;
+$gallery-box-price-color: $white;
+$gallery-box-line-secound-color: $gray-2;
+$gallery-box-shadow: $dark-gray;
+$gallery-box-triangle-color: $dark-gray;
+$gallery-box-main-color: $dark-gray;
+$gallery-box-right-price-color: $green;
+$gallery-box-right-furniture-color: $dark-orage;
+$gallery-box-right-button-bg-color: $green;
+$gallery-box-right-button-text-color: $white;
+
 $button-bg: $dark-gray;
 $button-color-text: $white;
 
@@ -97,6 +118,11 @@ $brand-logo-border-color: $light-gray;
 $brand-button-bg: $dark-gray;
 $brands-logoBox-color: $white;
 
+$brand-border-color: $light-gray;
+$brand-logo-border-color: $light-gray;
+$brand-button-bg: $dark-gray;
+$brands-logoBox-color: $white;
+
 $primary: $dark-orage;
 $header-bg: $gray-5;
 
@@ -105,3 +131,7 @@ $text-color: $dark-gray;
 $form-border-color: $dark-gray;
 
 $base-padding: 24px;
+
+%hover-params {
+  transition: all 0.50s;
+}
