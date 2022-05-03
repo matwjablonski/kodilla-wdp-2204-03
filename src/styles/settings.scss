@@ -55,9 +55,10 @@ $feature-box-icon-wrapper-color: $white;
 $button-bg: $dark-gray;
 $button-color-text: $white;
 
-%hover-params {
-  transition: all 0.50s;
-}
+$brand-border-color: $light-gray;
+$brand-logo-border-color: $light-gray;
+$brand-button-bg: $dark-gray;
+$brands-logoBox-color: $white;
 
 $primary: $dark-orage;
 $header-bg: $gray-5;
@@ -67,3 +68,7 @@ $text-color: $dark-gray;
 $form-border-color: $dark-gray;
 
 $base-padding: 24px;
+
+%hover-params {
+  transition: all 0.50s;
+}
