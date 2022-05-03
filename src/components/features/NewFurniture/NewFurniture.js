@@ -149,10 +149,7 @@ class NewFurniture extends React.Component {
               {categoryProducts
                 .slice(activePage * 8, (activePage + 1) * 8)
                 .map(item => (
-                  <div
-                    key={item.id}
-                    className={this.assignClass() + 'col-6 col-md-4 col-lg-3'}
-                  >
+                  <div key={item.id} className={this.assignClass()}>
                     <ProductBox
                       {...item}
                       handleCompareClick={this.handleCompareClick}
