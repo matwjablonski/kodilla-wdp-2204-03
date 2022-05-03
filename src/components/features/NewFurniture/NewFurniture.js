@@ -147,7 +147,9 @@ class NewFurniture extends React.Component {
             </div>
           </div>
           <div className='row'>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
+            {categoryProducts
+              .slice(activePage * 8, (activePage + 1) * 8)
+                .map(item => (
               <div key={item.id} className={this.assignClass()}>
                 <ProductBox {...item} handleCompareClick={this.handleCompareClick} />
               </div>
