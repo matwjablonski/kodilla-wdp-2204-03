@@ -293,6 +293,20 @@ const initialState = {
       id: 'brand4',
       image: '../images/brands/brand04.jpeg',
     },
+   ],   
+  deals: [
+    {
+      id: 'first-deal',
+      deal: ['Guest room', 'sofa', '-20%'],
+    },
+    {
+      id: 'second-deal',
+      deal: ['Office', 'chair', 'collection', '$200.00'],
+    },
+    {
+      id: 'third-deal',
+      deal: ['Special', 'collection', 'Save up 45% of furniture'],
+    },
   ],
 };
 
