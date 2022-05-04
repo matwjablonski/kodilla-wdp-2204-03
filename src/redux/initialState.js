@@ -17,6 +17,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: true,
       addToCompare: true,
     },
@@ -29,8 +30,8 @@ const initialState = {
       userRating: true,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: false,
-      addToCompare: true,
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -41,8 +42,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: false,
-      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -53,8 +54,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: true,
-      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-5',
@@ -65,8 +66,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: true,
-      addToCompare: true,
     },
     {
       id: 'aenean-ru-bristique-6',
@@ -77,8 +78,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: false,
-      addToCompare: true,
     },
     {
       id: 'aenean-ru-bristique-7',
@@ -89,8 +90,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: true,
-      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-8',
@@ -101,8 +102,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: false,
-      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-9',
@@ -113,8 +114,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: false,
-      addToCompare: true,
     },
     {
       id: 'aenean-ru-bristique-10',
@@ -125,8 +126,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: true,
-      addToCompare: true,
     },
     {
       id: 'aenean-ru-bristique-11',
@@ -137,8 +138,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: false,
-      addToCompare: true,
     },
     {
       id: 'aenean-ru-bristique-12',
@@ -149,8 +150,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: false,
-      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-13',
@@ -161,8 +162,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: false,
-      addToCompare: true,
     },
     {
       id: 'aenean-ru-bristique-14',
@@ -173,8 +174,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: true,
-      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-15',
@@ -185,8 +186,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: true,
-      addToCompare: true,
     },
     {
       id: 'aenean-ru-bristique-16',
@@ -197,8 +198,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: false,
-      addToCompare: true,
     },
     {
       id: 'aenean-ru-bristique-17',
@@ -209,8 +210,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: true,
-      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-18',
@@ -221,8 +222,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: false,
-      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-19',
@@ -233,8 +234,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: false,
-      addToCompare: true,
     },
     {
       id: 'aenean-ru-bristique-20',
@@ -245,8 +246,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: true,
-      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-21',
@@ -257,8 +258,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: true,
-      addToCompare: true,
     },
     {
       id: 'aenean-ru-bristique-22',
@@ -269,8 +270,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: true,
-      addToCompare: true,
     },
     {
       id: 'aenean-ru-bristique-23',
@@ -281,8 +282,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: true,
-      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-24',
@@ -293,8 +294,8 @@ const initialState = {
       userRating: false,
       promo: 'sale',
       newFurniture: true,
+      compare: false,
       isFavorite: false,
-      addToCompare: true,
     },
   ],
   cart: {
@@ -317,7 +318,35 @@ const initialState = {
       id: 'brand4',
       image: '../images/brands/brand04.jpeg',
     },
-   ],   
+  ],
+  promotion: [
+    {
+      id: 'adadca',
+      name: 'Anean Ru Britique',
+      category: 'Chair',
+      promo: 'sale',
+      oldPrice: '$ 350.00',
+      price: '300.00',
+      newFurniture: true,
+      isFavorite: true,
+      compare: true,
+      image:
+        'https://images.pexels.com/photos/11741412/pexels-photo-11741412.jpeg?cs=srgb&dl=pexels-ksenia-chernaya-11741412.jpg&fm=jpg',
+    },
+    {
+      id: 'asdasdasd-2',
+      name: 'indoor',
+      name2: 'furniture',
+      category: 'Sofa',
+      promo: 'sale',
+      description: 'save up to 50% of all furniture',
+      newFurniture: true,
+      isFavorite: true,
+      compare: true,
+      image:
+        'https://images.pexels.com/photos/6934175/pexels-photo-6934175.jpeg?cs=srgb&dl=pexels-max-vakhtbovych-6934175.jpg&fm=jpg',
+    },
+  ],
   deals: [
     {
       id: 'first-deal',
