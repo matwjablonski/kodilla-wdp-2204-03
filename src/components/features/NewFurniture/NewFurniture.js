@@ -14,14 +14,23 @@ class NewFurniture extends React.Component {
     desktop: false,
     tablet: false,
     mobile: false,
+    fade: 'fadeIn',
   };
 
   handlePageChange(newPage) {
-    this.setState({ activePage: newPage });
+    setTimeout(() => {
+      this.setState({ activePage: newPage, fade: 'fadeIn' });
+    }, 500);
+    clearTimeout(500);
+    this.setState({ fade: 'fadeOut' });
   }
 
   handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
+    setTimeout(() => {
+      this.setState({ activeCategory: newCategory, fade: 'fadeIn' });
+    }, 500);
+    clearTimeout(500);
+    this.setState({ fade: 'fadeOut' });
   }
 
   handleCompareClick = (id, compare) => {
@@ -93,8 +102,7 @@ class NewFurniture extends React.Component {
 
   render() {
     const { categories, products } = this.props;
-
-    const { activeCategory, activePage } = this.state;
+    const { activeCategory, activePage, fade } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
@@ -145,7 +153,7 @@ class NewFurniture extends React.Component {
                 </div>
               </div>
             </div>
-            <div className='row'>
+            <div className={`${'row'} ${styles[fade]}`}>
               {categoryProducts
                 .slice(activePage * 8, (activePage + 1) * 8)
                 .map(item => (
