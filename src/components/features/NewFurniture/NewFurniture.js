@@ -32,7 +32,7 @@ class NewFurniture extends React.Component {
       removeFromCompare(id);
     }
   };
-
+  
   componentDidMount() {
     this.updateViewportWidth();
     window.addEventListener('resize', this.updateViewportWidth);
