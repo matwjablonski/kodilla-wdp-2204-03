@@ -20,10 +20,10 @@ const ProductSearch = () => {
       <div className={styles.category}>
         <FontAwesomeIcon className={styles.icon} icon={faListUl} />
         <div className={styles.selectField}>
-          <ul>
+          <ul key={selects.id}>
             <li>
               Select a category
-              <ul key={selects.id}>
+              <ul>
                 {selects.map(select => (
                   <li key={select.id}>{select.name}</li>
                 ))}
