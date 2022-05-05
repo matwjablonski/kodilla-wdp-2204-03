@@ -10,6 +10,7 @@ import Promotion from '../../features/Promotion/Promotion';
 import GalleryBox from '../../features/GalleryBox/GalleryBox';
 import DealsBoxes from '../../features/DealsBoxes/DealsBoxesContainer';
 
+
 const Homepage = () => (
   <div className={styles.root}>
     <Promotion />

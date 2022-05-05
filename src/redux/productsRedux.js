@@ -23,7 +23,10 @@ const ADD_USER_STAR = createActionName('ADD_USER_STAR');
 export const addToCompare = payload => ({ payload, type: ADD_TO_COMPARE });
 export const removeFromCompare = payload => ({ payload, type: REMOVE_FROM_COMPARE });
 export const removeItem = payload => ({ payload, type: REMOVE_ITEM });
+
+const ADD_USER_STAR = createActionName('ADD_USER_STAR');
 export const addFavoriteStar = payload => ({ payload, type: ADD_USER_STAR });
+
 export const triggerFavorite = payload => ({ payload, type: TRIGGER_FAVORITE });
 
 /* reducer */
