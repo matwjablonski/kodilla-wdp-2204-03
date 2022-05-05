@@ -60,6 +60,13 @@ export default function reducer(statePart = [], action = {}) {
         return product;
       });
     }
+      
+    case ADD_USER_STAR:
+      return statePart.map(product =>
+        product.id === action.payload.id
+          ? { ...product, userRating: true, stars: action.payload.i }
+          : product
+      );
 
     case ADD_USER_STAR:
       return statePart.map(product =>

@@ -34,6 +34,7 @@
       position: absolute;
       right: 0;
       top: 8px;
+      cursor: pointer;
     }
     .slick_dots {
       display: flex;
@@ -186,7 +187,7 @@
     }
     .button_shopNow {
       position: absolute;
-      bottom: -85%;
+      bottom: -95%;
       left: 30%;
       color: $promotion-button-shop-now-color;
       background-color: $promotion-button-shop-now-bg;
