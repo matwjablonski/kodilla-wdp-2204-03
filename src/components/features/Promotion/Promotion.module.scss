@@ -1,0 +1,221 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  margin: 2px;
+
+  .borderLeftSite {
+    border: 1px solid $header-bg;
+  }
+
+  .leftSite {
+    height: 400px;
+    position: relative;
+    display: flex;
+    background: {
+      size: cover;
+      repeat: no-repeat;
+      position: center;
+    }
+  }
+
+  .slider {
+    height: 40px;
+    background-color: $promotion-slider;
+    width: 400px;
+    h5 {
+      color: $promotion-color-text;
+      font-size: 16px;
+      margin-left: 15px;
+      margin-top: 5px;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+    .dots {
+      position: absolute;
+      right: 0;
+      top: 8px;
+      cursor: pointer;
+    }
+    .slick_dots {
+      display: flex;
+      list-style-type: none;
+      left: 50%;
+      bottom: 30px;
+    }
+    .slick_dots li {
+      font-size: 0;
+      background-color: $promotion-slick-dots-bg;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      margin: 0 5px;
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+
+  .line {
+    margin: 0 10px;
+    border-bottom: 1px solid $text-color;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 30px;
+      border-bottom: 4px solid $primary;
+      transform: translateX(-50%);
+    }
+  }
+
+  .content {
+    text-align: center;
+    padding: 20px;
+    h5 {
+      color: $text-color;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+    .stars {
+      a {
+        text-decoration: none;
+        color: $promotion-stars-color;
+      }
+    }
+    .dots {
+      position: absolute;
+      left: -5%;
+      bottom: 30%;
+    }
+    .slick_dots {
+      display: flex;
+      background-color: transparent;
+      margin: 0;
+      opacity: 0;
+      overflow: hidden;
+      list-style-type: none;
+    }
+    .slick_dots li {
+      display: inline-block;
+      font-size: 20px;
+      background-color: $promotion-slick-dots-bottom-bg;
+      width: 70px;
+      height: 70px;
+      border: 1px solid $promotion-slick-dots-bottom-border;
+      border-radius: 50%;
+      margin: 0 5px;
+    }
+    .slick_dots p {
+      display: block;
+      font-size: 20px;
+      text-align: center;
+      color: $promotion-color-text;
+      background-color: transparent;
+    }
+  }
+
+  .actions {
+    padding: 15px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+  .oldPrice {
+    color: $promotion-old-price-color;
+    font-size: 13px;
+    text-decoration: line-through;
+    margin-right: 10px;
+  }
+}
+
+  .buttons {
+    position: absolute;
+    bottom: 40%;
+    left: 24%;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+  }
+
+  &:hover {
+    .buttons {
+      opacity: 1;
+    }
+    .slick_dots {
+      opacity: 1;
+    }
+  }
+
+  .rightSite {
+    height: 558px;
+    position: relative;
+    display: flex;
+    background: {
+      size: cover;
+      repeat: no-repeat;
+      position: center;
+    }
+    .rightContent {
+      z-index: 1;
+      position: absolute;
+      bottom: 40%;
+      left: 20%;
+      color: $promotion-color-text;
+      text-transform: uppercase;
+    }
+    .name {
+      display: inline;
+      font-size: 50px;
+      font-weight: 300;
+    }
+    .name2 {
+      margin-left: 10px;
+      font-size: 50px;
+      display: inline;
+      font-weight: bold;
+    }
+    .description {
+      font-weight: 200;
+      text-align: center;
+    }
+    .button_shopNow {
+      position: absolute;
+      bottom: -95%;
+      left: 30%;
+      color: $promotion-button-shop-now-color;
+      background-color: $promotion-button-shop-now-bg;
+    }
+    .button_right_left {
+      position: relative;
+      top: 90%;
+      width: 730px;
+    }
+    .button_right_left button {
+      background-color: $promotion-button-bottom-right-left-bg;
+      height: 55px;
+      color: $promotion-button-bottom-right-left-color;
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+
+  .rightSite::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 45%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background-color: $promotion-right-site-after-bg;
+    opacity: 0.6;
+  }
+}

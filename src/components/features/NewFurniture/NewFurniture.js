@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
+import CompareBox from '../CompareBox/CompareBoxContainer.js';
 import Swipe from 'react-easy-swipe';
 
 class NewFurniture extends React.Component {
@@ -31,6 +32,15 @@ class NewFurniture extends React.Component {
     clearTimeout(500);
     this.setState({ fade: 'fadeOut' });
   }
+
+  handleCompareClick = (id, compare) => {
+    const { addToCompare, removeFromCompare } = this.props;
+    if (!compare) {
+      addToCompare(id);
+    } else {
+      removeFromCompare(id);
+    }
+  };
 
   componentDidMount() {
     this.updateViewportWidth();
@@ -100,7 +110,7 @@ class NewFurniture extends React.Component {
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
-        <li>
+        <li key={i}>
           <a
             onClick={() => this.handlePageChange(i)}
             className={i === activePage && styles.active}
@@ -121,10 +131,10 @@ class NewFurniture extends React.Component {
           <div className='container'>
             <div className={styles.panelBar}>
               <div className='row no-gutters align-items-end'>
-                <div className={'col-auto ' + styles.heading}>
+                <div className={'col-12 col-md-auto ' + styles.heading}>
                   <h3>New furniture</h3>
                 </div>
-                <div className={'col ' + styles.menu}>
+                <div className={'col-auto col-md col-sm-auto ' + styles.menu}>
                   <ul>
                     {categories.map(item => (
                       <li key={item.id}>
@@ -138,7 +148,7 @@ class NewFurniture extends React.Component {
                     ))}
                   </ul>
                 </div>
-                <div className={'col-auto ' + styles.dots}>
+                <div className={'col-12 col-sm-auto ' + styles.dots}>
                   <ul>{dots}</ul>
                 </div>
               </div>
@@ -148,12 +158,16 @@ class NewFurniture extends React.Component {
                 .slice(activePage * 8, (activePage + 1) * 8)
                 .map(item => (
                   <div key={item.id} className={this.assignClass()}>
-                    <ProductBox {...item} />
+                    <ProductBox
+                      {...item}
+                      handleCompareClick={this.handleCompareClick}
+                    />
                   </div>
                 ))}
             </div>
           </div>
         </div>
+        <CompareBox />
       </Swipe>
     );
   }
@@ -181,6 +195,8 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+  addToCompare: PropTypes.func,
+  removeFromCompare: PropTypes.func,
 };
 
 NewFurniture.defaultProps = {

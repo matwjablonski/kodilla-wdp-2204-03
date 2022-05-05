@@ -54,6 +54,12 @@
         font-size: 20px;
         @extend %hover-params;
 
+        position: absolute;
+        left: -45px;
+        top: -13px;
+        text-align: left;
+
+
         .icon {
           margin-left: 15px;
           margin-top: 14px
