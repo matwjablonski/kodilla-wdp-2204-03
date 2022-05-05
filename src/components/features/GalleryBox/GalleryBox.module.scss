@@ -57,7 +57,8 @@
       .active {
         border-top: 3px solid $gallery-box-anchor-text-color-hover;
         background-color: $gallery-box-background-active;
-        border-bottom: 0;
+        border-bottom: 2px solid $gallery-box-background-active;
+
         a {
           color: $gallery-box-anchor-text-color-hover; 
         }  
@@ -245,6 +246,16 @@
         font-weight: bold;
       }
     }
+  }
+
+  .out {
+    opacity: 0;
+    transition: opacity 250ms linear;
+  }
+
+  .in {
+    opacity: 1;
+    transition: opacity 250ms linear;
   }
 }
 

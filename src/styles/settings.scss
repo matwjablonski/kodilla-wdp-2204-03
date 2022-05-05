@@ -121,3 +121,7 @@ $text-color: $dark-gray;
 $form-border-color: $dark-gray;
 
 $base-padding: 24px;
+
+%hover-params {
+  transition: all 0.50s;
+}

@@ -17,7 +17,7 @@ const ProductBox = ({
   handleCompareClick,
   id,
   isFavorite,
-  // addToCompare,
+  addToCompare,
   userRating,
   oldPrice,
 }) => (
