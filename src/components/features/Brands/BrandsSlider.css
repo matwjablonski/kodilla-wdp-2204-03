@@ -1,0 +1,38 @@
+.brandsSlider .slick-slider {
+  border-top: #dee2e6  1px solid;
+  border-bottom: #dee2e6 1px solid;
+  padding-top: 5px;
+}
+
+.brandsSlider .slick-slider .slick-list {
+  margin: 20px 40px;
+}
+
+.brandsSlider .slick-slide img {
+  border: #dee2e6 1px solid;
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brandsSlider .slick-slider .slick-prev {
+  z-index: 1;
+  position: absolute;
+  top: 49%;
+  left: 0;
+  width: 25px;
+  height: 109px;
+  cursor: pointer;
+  background: black;
+}
+
+.brandsSlider .slick-slider .slick-next {
+  z-index: 1;
+  position: absolute;
+  top: 49%;
+  right: 0;
+  width: 25px;
+  height: 109px;
+  cursor: pointer;
+  background: black;
+}

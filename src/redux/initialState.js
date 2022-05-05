@@ -303,40 +303,31 @@ const initialState = {
   },
   brands: [
     {
-      id: 'brand1',
-      // image: '../images/brands/brand01.jpeg',
+      id: 'brand01',
     },
     {
-      id: 'brand2',
-      // image: '../images/brands/brand02.jpeg',
+      id: 'brand02',
     },
     {
-      id: 'brand3',
-      // image: '../images/brands/brand03.jpeg',
+      id: 'brand03',
     },
     {
-      id: 'brand4',
-      // image: '../images/brands/brand04.jpeg',
+      id: 'brand04',
     },
     {
-      id: 'brand5',
-      // image: '../images/brands/brand05.jpeg',
+      id: 'brand05',
     },
     {
-      id: 'brand6',
-      // image: '../images/brands/brand06.jpeg',
+      id: 'brand06',
     },
     {
-      id: 'brand7',
-      // image: '../images/brands/brand07.jpeg',
+      id: 'brand07',
     },
     {
-      id: 'brand8',
-      // image: '../images/brands/brand08.jpeg',
+      id: 'brand08',
     },
     {
-      id: 'brand9',
-      // image: '../images/brands/brand09.jpeg',
+      id: 'brand09',
     },
   ],
   promotion: [
