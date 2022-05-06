@@ -303,20 +303,31 @@ const initialState = {
   },
   brands: [
     {
-      id: 'brand1',
-      image: '../images/brands/brand01.jpeg',
+      id: 'brand01',
     },
     {
-      id: 'brand2',
-      image: '../images/brands/brand02.jpeg',
+      id: 'brand02',
     },
     {
-      id: 'brand3',
-      image: '../images/brands/brand03.jpeg',
+      id: 'brand03',
     },
     {
-      id: 'brand4',
-      image: '../images/brands/brand04.jpeg',
+      id: 'brand04',
+    },
+    {
+      id: 'brand05',
+    },
+    {
+      id: 'brand06',
+    },
+    {
+      id: 'brand07',
+    },
+    {
+      id: 'brand08',
+    },
+    {
+      id: 'brand09',
     },
   ],
   promotion: [
